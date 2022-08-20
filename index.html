@@ -38,11 +38,63 @@
       color="#ffcb37"
     />
     <link rel="shortcut icon" href="img/icons/favicon.ico" />
+
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="fontawesome/css/solid.css" />
+    <link rel="stylesheet" href="fontawesome/css/regular.css" />
+    <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="css/utilities.css" />
   </head>
 
   <body>
-    <p>Hello world!</p>
+    <header class="sticky inset-0 h-20 z-100 bg-gray shadow-sm">
+      <div class="container h-full">
+        <div class="flex-row h-full justify-start items-center gap-4">
+          <a href="/" class="flex-row items-center mr-auto">
+            <img
+              class="h-12"
+              draggable="false"
+              src="img/logo.png"
+              alt="Hikstore"
+            />
+            <h2 class="text-2xl">Hikstore</h2>
+          </a>
+          <nav class="flex-row items-center gap-6 sm-hidden">
+            <button class="text-xl">
+              <i class="fa-regular fa-magnifying-glass"></i>
+            </button>
+            <button class="text-xl relative">
+              <i class="fa-regular fa-bag-shopping"></i>
+              <span
+                class="absolute text-xs text-white -top-1 -right-2 bg-primary h-4 aspect-square rounded-full"
+                >0</span
+              >
+            </button>
+            <button class="text-xl">
+              <i class="fa-regular fa-user"></i>
+            </button>
+          </nav>
+          <nav class="flex-row items-center gap-2 sm-hidden">
+            <button
+              type="button"
+              class="border-2 border-primary text-white bg-primary rounded px-5 py-2"
+            >
+              Sign Up
+            </button>
+            <button
+              type="button"
+              class="border-2 border-primary rounded px-5 py-2"
+            >
+              Log In
+            </button>
+          </nav>
+          <button id="hamburger" class="flex-row items-center gap-2 text-2xl">
+            <span class="text-lg">Menu</span>
+            <i class="fa-regular fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </header>
     <script src="js/main.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
