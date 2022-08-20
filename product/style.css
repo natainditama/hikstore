@@ -4,19 +4,33 @@
     margin-right: auto;
     width: 100%;
 }
+/* start sidebar top */
+.sidebar-top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom:1px solid rgba(0, 0, 0, 0.356);
+    padding: 40px;
+}
+
+.sidebar-top h1{
+    font-size: 50px;
+}
+/* end sidebar top */
 
 .content_wrapper{
     display: grid;
-    grid-template-columns: 450px minmax(100px, 526px);
+    grid-template-columns: repeat(2,376px);
     font-family:var(--font-fallback);
 }
 
 .sidebar{
     width: 70%;
     min-height: 1705.88px;
-    background-color: #e2d7d738;
+    background-color: #cbcbd17c;
     border-right: 1px solid rgba(0, 0, 0, 0.356);
-
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }
 .section-sidebar{
     margin: 60px 30px;
@@ -93,7 +107,7 @@
     appearance: none;
     width: 16px;
     height: 16px;
-    background: white;
+    background: rgb(219, 215, 215);
     border: 3px solid black;
     border-radius: 20px;
     cursor: pointer;
@@ -107,7 +121,7 @@
 }
 
 .price-text-1 p {
-    background-color: #000000;
+    background-color: var(--primary);
     color: aliceblue;
     padding: 9px 12px;
     margin-right: 8px; 
@@ -160,10 +174,9 @@
     font-weight: 900;
 }
 .sidear-wrap-3 ul{
-    width: 50%;
     padding: 10px 0px;
     border-radius: 30px;
-    margin-left: 30px;
+    margin-left: 6px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
 }
 .sidear-wrap-3 ul li {
@@ -180,22 +193,30 @@
 /* end color */
 /* start section grup */
 .sections_group{
-    margin: 30px 0px;
-    float: left;
+    display: grid;
+    grid-template-columns: repeat(3,268px);
 }
-.search label{
-    color: white;
-    background-color: #000000;
+.post-shop{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     padding: 10px;
-    border-radius: 4px;
+    border-radius: 10px;
 }
-.search input {
-    outline: none;
-    background-color: transparent;
-    border: 1px solid black;
-    height: 41px;
-    border-radius: 6px;
-    margin: 0px;
-    padding-left: 13px;
+.desc h1{
+    font-size: 18px;
+}
+.desc p {
+    text-align: justify;
+}
+.desc a {
+
+    color: red;
+    font-size: 14px;
+    font-weight: 600;
+}
+.desc a:hover{
+    text-decoration: underline;
+}
+.text{
+    margin: 40px;
 }
 /* end section grup */

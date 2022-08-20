@@ -8,10 +8,19 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../css/main.css">
+    <script src="https://kit.fontawesome.com/f3d2ade942.js" crossorigin="anonymous"></script>
     <title>List Product</title>
 </head>
 <body>
     <div class="container mx-lg">
+        <div class="sidebar-top">
+            <h1>Product</h1>
+            <h2>
+                <a href="#">Home</a>
+                /
+                <a href="#">Shop</a>
+            </h2>
+        </div>
         <div class="content">
             <div class="content_wrapper">
                 <div class="sidebar">
@@ -104,19 +113,55 @@
                         </div>
                     </div>
                 </div>
-                <div class="sections_group">
-                   <div class="search">
-                       <form action="/">
-                            <label for="name">Search</label>
-                           <input type="text" id="name" placeholder="Search">
-                       </form>
-                   </div>
-                   <div class="popular">
-
-                   </div>
+                <div class="shop-section">
+                    <div class="shop-title">
+                        <div class="text">
+                            <h1>Showing 1–4 of 20 results</h1>
+                        </div>
+                        <div class="category-top">
+                            
+                        </div>
+                    </div>
+                    <div class="sections_group">
+                        <div class="product-top">
+                         <div class="post-shop">
+                                 <div class="all-shop">
+                                     <div class="post-img">
+                                         <img src="" alt="">
+                                     </div>
+                                     <div class="category-name">
+                                         <h1></h1>
+                                     </div>
+                               </div>
+                               <div class="all-shop-content">
+                                   <div class="post-top">
+                                       <div class="tgl">
+                                           <h1>09-february-2022</h1>
+                                           <span>
+                                            Comment <i class="fa-solid fa-comment"></i>
+                                           </span>
+                                       </div>
+                                       <div class="desc">
+                                           <h1>Lorem ipsum dolor sit amet</h1>
+                                           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio aut possimus id eos veritatis reprehenderit illo ratione, quisquam, modi fugiat reiciendis consequatur eaque beatae magnam sed inventore error sint vero.</p>
+                                           <h2>
+                                               $0-$6
+                                           </h2>
+                                           <a href="#" class="readmore">
+                                               Readmore
+                                           </a>
+                                       </div>
+                                   </div>
+                               </div>
+                         </div>
+                        </div>
+                     </div>
                 </div>
             </div>
         </div>
+        <footer>
+
+        </footer>
     </div>
 </body>
 <script>
@@ -146,5 +191,25 @@ value.textContent = slider.value;
 slider.oninput = function(){
     value.textContent = this.value;
 }
+</script>
+<script>
+    var readmore = document.getElementsByClassName('readmore');
+    var i;
+    var len = readmore.length;
+    for(i = 0; i < len; i++)
+    {
+        readmore[i].addEventListener('click', function(){
+            this.classList.toggle('active');
+            var list = this.nextElementSibling;
+            if(list.style.maxHeight)
+            {
+                list.style.maxHeight = null;
+            }
+            else
+            {
+                list.style.maxHeight = list.scrollHeight + 'px';
+            }
+        })
+    }
 </script>
 </html>
