@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f3d2ade942.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>List Product</title>
+</head>
+<body>
+    <div class="container mx-lg">
+        <div class="content">
+            <div class="content_wrapper">
+                <div class="sidebar">
+                    <div class="section-sidebar">
+                        <div class="sidebar-wrap">
+                            <div class="categori">
+                                <h5>Filter by Cattegory:</h5>
+                                <div class="icons"><i class="fa-solid fa-angle-down"></i></div>
+                            </div>
+                            <div class="list-categori">
+                              <ul>
+                                  <li><a href="#">lorem ipsum</a></li>
+                                  <li><a href="#">lorem ipsum</a></li>
+                                  <li><a href="#">lorem ipsum</a></li>
+                                  <li><a href="#">lorem ipsum</a></li>
+                                  <li><a href="#">lorem ipsum</a></li>
+                              </ul>
+                            </div>
+                        </div>
+                        <div class="sidebar-warp-2">
+                            <div class="title">
+                                <h1>Filter by price:</h1>
+                            </div>
+                            <div class="price-box">
+                                <div class="slide">
+                                    <input type="range" min="0" max="40" value="10" id="input-slide">
+                                    <div class="price">
+                                        <div class="price-text-1">
+                                            <p>filter</p>
+                                        </div>
+                                        <div class="price-text-2" id="text-price">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sidear-wrap-3">
+                            <div class="title-1">
+                                <h1>Filter by Color:</h1>
+                            </div>
+                            <div class="option-color">
+                                <ul>
+                                    <li>
+                                        <span class="option-color" data-color="#9be8d3" style="background-color: #9be8d3;" >
+                                            <input type="checkbox" style="opacity: 0;">
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="option-color" data-color="#9be8d3" style="background-color: #e76d48;" >
+                                            <input type="checkbox" style="opacity: 0;">
+                                        </span>
+                                    </li>                 
+                                    <li>
+                                        <span class="option-color" data-color="#9be8d3" style="background-color: #9be834;" >
+                                            <input type="checkbox" style="opacity: 0;">
+                                        </span>
+                                    </li> 
+                                    <li>
+                                        <span class="option-color" data-color="#9be8d3" style="background-color: #2c1fe2;" >
+                                            <input type="checkbox" style="opacity: 0;">
+                                        </span>
+                                    </li> 
+                                    <li>
+                                        <span class="option-color" data-color="#9be8d3" style="background-color: #9ba9e8;" >
+                                            <input type="checkbox" style="opacity: 0;">
+                                        </span>
+                                    </li> 
+                                    <li>
+                                        <span class="option-color" data-color="#9be8d3" style="background-color: #0066ff;" >
+                                            <input type="checkbox" style="opacity: 0;">
+                                        </span>
+                                    </li> 
+                                    <li>
+                                        <span class="option-color" data-color="#9be8d3" style="background-color: #df6dfc;" >
+                                            <input type="checkbox" style="opacity: 0;">
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="option-color" data-color="#9be8d3" style="background-color: #e8e39b;" >
+                                            <input type="checkbox" style="opacity: 0;">
+                                        </span>
+                                    </li>  
+                                    <li>
+                                        <span class="option-color" data-color="#9be8d3" style="background-color: #e89bbf;" >
+                                            <input type="checkbox" style="opacity: 0;">
+                                        </span>
+                                    </li> 
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sections_group">
+                   <div class="search">
+                       <form action="/">
+                            <label for="name">Search</label>
+                           <input type="text" id="name" placeholder="Search">
+                       </form>
+                   </div>
+                   <div class="popular">
+
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var categori = document.getElementsByClassName('categori');
+    var i;
+    var len = categori.length;
+    for(i = 0; i < len; i++)
+    {
+        categori[i].addEventListener('click', function(){
+            this.classList.toggle('active');
+            var list = this.nextElementSibling;
+            if(list.style.maxHeight)
+            {
+                list.style.maxHeight = null;
+            }
+            else
+            {
+                list.style.maxHeight = list.scrollHeight + 'px';
+            }
+        })
+    }
+</script>
+<script>
+var slider = document.getElementById("input-slide");
+var value = document.getElementById("text-price");
+value.textContent = slider.value;
+slider.oninput = function(){
+    value.textContent = this.value;
+}
+</script>
+</html>
