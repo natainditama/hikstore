@@ -1,9 +1,9 @@
-function select(el, all = false) {
+function select(el, all = false, scope = document) {
   el = el.trim();
   if (all) {
-    return [...document.querySelectorAll(el)];
+    return [...scope.querySelectorAll(el)];
   } else {
-    return document.querySelector(el);
+    return scope.querySelector(el);
   }
 }
 
