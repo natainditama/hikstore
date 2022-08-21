@@ -15,7 +15,8 @@ class Auth {
     this.profile = this.getUsers(this.currentUser)[0];
     if (!!this.profile) {
       if (select("nav.is-auth")) select("nav.is-auth").style.display = "flex";
-      if (select("#app-bar") && window.innerWidth <= 768) select("#app-bar").style.display = "block";
+      if (select("#app-bar")) select("#app-bar").classList.add("sm-block");
+      if (select("#header")) select("#header").classList.add("sm-hidden");
       if (select(".user-email")) {
         select(".user-email").textContent = this.profile.email;
       }
