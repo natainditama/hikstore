@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sign up - Hikstore</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta name="theme-color" content="#f4f4f5" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="shortcut icon" href="/img/icons/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#f4f4f5" />
+    <meta name="msapplication-config" content="browserconfig.xml" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/img/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/img/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/img/icons/favicon-16x16.png"
+    />
+    <link
+      rel="mask-icon"
+      href="/img/icons/safari-pinned-tab.svg"
+      color="#ffcb37"
+    />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/fontawesome/css/solid.css" />
+    <link rel="stylesheet" href="/fontawesome/css/regular.css" />
+    <link rel="stylesheet" href="/fontawesome/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="/css/utilities.css" />
+  </head>
+
+  <body>
+    <header id="header" class="fixed inset-0 h-20 z-100">
+      <div class="container h-full">
+        <div
+          class="flex-row h-full justify-start items-center gap-4 sm-justify-center"
+        >
+          <a href="/" class="flex-row items-center">
+            <img
+              class="h-12"
+              draggable="false"
+              src="/img/logo-light.png"
+              alt="Hikstore"
+            />
+            <h2 class="text-2xl text-white">Hikstore</h2>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main class="overflow-hidden">
+      <section class="h-screen overflow-hidden">
+        <div class="grid grid-cols-3 sm-grid-rows-3 sm-grid-cols-none h-full">
+          <div class="relative col-span-2 sm-col-auto bg-black">
+            <video
+              type="video/mp4"
+              volume="0"
+              muted=""
+              loop=""
+              playsinline=""
+              preload="none"
+              autoplay=""
+              class="absolute inset-0 object-cover"
+              style="width: calc(100% + 1rem); height: calc(100% + 0.5rem)"
+            >
+              <source
+                src="https://videos.ctfassets.net/l595fda2nfqd/42P8s5tGtAtFZJbwZf7CrT/1977a6b92b8bea13df75ae2564b7a237/160years_Home_Teaser.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+          <div
+            class="flex-col justify-center items-center h-full sm-row-span-2"
+          >
+            <h2 class="text-4xl mb-2">Sign Up</h2>
+            <p class="text-lg mb-6">Sign up to create new account</p>
+            <form
+              action=""
+              method="post"
+              class="flex-col gap-4"
+              style="width: 80%"
+            >
+              <div class="flex-col">
+                <input
+                  class="w-full border-2 rounded-lg shadow-sm py-4 px-5"
+                  type="text"
+                  name="email"
+                  placeholder="Enter your email address"
+                />
+              </div>
+              <div class="flex-col">
+                <input
+                  class="w-full border-2 rounded-lg shadow-sm py-4 px-5"
+                  type="password"
+                  name="password"
+                  placeholder="Choose a password"
+                />
+              </div>
+              <div class="flex-col">
+                <input
+                  class="w-full border-2 rounded-lg shadow-sm py-4 px-5"
+                  type="password"
+                  name="confirm"
+                  placeholder="Confirm a password"
+                />
+              </div>
+              <div class="flex-col">
+                <button
+                  type="submit"
+                  class="border-2 border-black text-white bg-black rounded px-5 py-4"
+                >
+                  Submit
+                </button>
+              </div>
+              <p class="text-center">
+                Already got an account?
+                <a href="/auth/login.html" class="mb-4 text-primary underline"
+                  >Log in</a
+                >
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+      window.ga = function () {
+        ga.q.push(arguments);
+      };
+      ga.q = [];
+      ga.l = +new Date();
+      ga("create", "G-5B7R2F5EPV", "auto");
+      ga("set", "anonymizeIp", true);
+      ga("set", "transport", "beacon");
+      ga("send", "pageview");
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async></script>
+  </body>
+</html>
