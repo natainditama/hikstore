@@ -44,6 +44,8 @@
     <link rel="stylesheet" href="/fontawesome/css/regular.css" />
     <link rel="stylesheet" href="/fontawesome/css/fontawesome.min.css" />
     <link rel="stylesheet" href="/css/utilities.css" />
+
+    <script src="/js/main.js" defer type="module"></script>
   </head>
 
   <body>
@@ -93,14 +95,16 @@
             <form
               action=""
               method="post"
-              class="flex-col gap-4"
+              class="form-login flex-col gap-4"
               style="width: 80%"
+              autocomplete="off"
             >
               <div class="flex-col">
                 <input
                   class="w-full border-2 rounded-lg shadow-sm py-4 px-5"
                   type="text"
                   name="email"
+                  required
                   placeholder="Enter your email address"
                 />
               </div>
@@ -109,6 +113,7 @@
                   class="w-full border-2 rounded-lg shadow-sm py-4 px-5"
                   type="password"
                   name="password"
+                  required
                   placeholder="Enter your password"
                 />
               </div>
