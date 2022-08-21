@@ -171,6 +171,9 @@
 .text-center {
   text-align: center;
 }
+.hidden {
+  display: none;
+}
 @media screen and (max-width: 768px) {
   .sm-hidden {
     display: none;
@@ -189,5 +192,8 @@
   }
   .sm-row-span-2 {
     grid-row: span 2 / span 2;
+  }
+  .sm-block {
+    display: block;
   }
 }

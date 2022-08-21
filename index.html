@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Hikstore</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -44,10 +44,12 @@
     <link rel="stylesheet" href="fontawesome/css/regular.css" />
     <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css" />
     <link rel="stylesheet" href="css/utilities.css" />
+
+    <script type="module" defer src="js/main.js"></script>
   </head>
 
   <body>
-    <header class="sticky inset-0 h-20 z-100 bg-gray shadow-sm">
+    <header id="header" class="sticky inset-0 h-20 z-100 bg-gray">
       <div class="container h-full">
         <div class="flex-row h-full justify-start items-center gap-4">
           <a href="/" class="flex-row items-center mr-auto">
@@ -57,45 +59,47 @@
               src="img/logo.png"
               alt="Hikstore"
             />
-            <h2 class="text-2xl">Hikstore</h2>
+            <h2 class="text-2xl sm-hidden">Hikstore</h2>
           </a>
-          <nav class="flex-row items-center gap-6 sm-hidden">
-            <button class="text-xl">
+          <nav class="is-auth flex-row items-center gap-6 hidden">
+            <button class="text-xl sm-hidden">
               <i class="fa-regular fa-magnifying-glass"></i>
             </button>
-            <button class="text-xl relative">
+            <button class="text-xl relative sm-hidden">
               <i class="fa-regular fa-bag-shopping"></i>
               <span
                 class="absolute text-xs text-white -top-1 -right-2 bg-primary h-4 aspect-square rounded-full"
                 >0</span
               >
             </button>
-            <button class="text-xl">
+            <button class="text-xl flex-row items-center gap-2">
+              <span class="user-email text-sm hidden sm-block"></span>
               <i class="fa-regular fa-user"></i>
             </button>
           </nav>
-          <nav class="flex-row items-center gap-2 sm-hidden">
-            <button
-              type="button"
+          <nav class="not-auth flex-row items-center gap-2 hidden">
+            <a
+              href="/auth/signup.html"
               class="border-2 border-primary text-white bg-primary rounded px-5 py-2"
             >
               Sign Up
-            </button>
-            <button
-              type="button"
+            </a>
+            <a
+              href="/auth/login.html"
               class="border-2 border-primary rounded px-5 py-2"
             >
               Log In
-            </button>
+            </a>
           </nav>
-          <button id="hamburger" class="flex-row items-center gap-2 text-2xl">
-            <span class="text-lg">Menu</span>
-            <i class="fa-regular fa-bars"></i>
+          <button class="btn-menu flex-row items-center gap-2 sm-hidden">
+            <span class="text-lg">MENU</span>
+            <span class="menu-icon">
+              <span></span>
+            </span>
           </button>
         </div>
       </div>
     </header>
-    <script src="js/main.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
     <script>
