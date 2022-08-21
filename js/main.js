@@ -20,4 +20,14 @@ addEvent("submit", ".form-login", (e) => {
   auth.login();
 });
 
+addEvent(
+  "click",
+  ".btn-menu",
+  function () {
+    const menuIcon = select(".menu-icon", false, this);
+    menuIcon.classList.toggle("is-open");
+  },
+  true
+);
+
 console.log("Loaded");
