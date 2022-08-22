@@ -15,6 +15,7 @@ class Auth {
     this.profile = this.getUsers(this.currentUser)[0];
     if (!!this.profile) {
       if (select("nav.is-auth")) select("nav.is-auth").style.display = "flex";
+      if (select("nav.not-auth")) select("nav.not-auth").style.display = "none";
       if (select("#app-bar")) select("#app-bar").classList.add("sm-block");
       if (select("#header")) select("#header").classList.add("sm-hidden");
       if (select(".user-email")) {
@@ -22,6 +23,12 @@ class Auth {
       }
     } else {
       if (select("nav.not-auth")) select("nav.not-auth").style.display = "flex";
+      if (select("nav.is-auth")) select("nav.is-auth").style.display = "none";
+      if (select("#app-bar")) select("#app-bar").classList.remove("sm-block");
+      if (select("#header")) select("#header").classList.remove("sm-hidden");
+      if (select(".user-email")) {
+        select(".user-email").textContent = "";
+      }
     }
   }
   login() {
@@ -44,6 +51,7 @@ class Auth {
   logout() {
     this.profile = [];
     localStorage.removeItem(this.currentUser);
+    this.init();
   }
   register() {
     this.values = this.getValues();
