@@ -25,9 +25,7 @@ Body{
 
 .sidebar{
     width: 70%;
-    background-color: #cbcbd17c;
     border-right: 1px solid rgba(0, 0, 0, 0.356);
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }
 .section-sidebar{
     margin: 60px 30px;
@@ -242,6 +240,8 @@ Body{
 
 .all-shop{
     padding: 18px;
+    background-color:var(--main-color);
+    border-radius: 10px;
 }
 .readmore-wrap{
     max-height: 200px !important;
@@ -303,29 +303,17 @@ Body{
     padding-right: 4px;
 }
 .post-img{
-    position: relative;
-    height: 258px;
-    width: 246px;
+    background-image: url("https://static.mammut.com/cdn-cgi/image/width=1000,quality=50,f=auto,metadata=none/master/1016-00800-50031_main-grey_229965.jpg");   /* First Image URL */
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 250px;
+    border-radius:10px;
+    transition: 0.5s ease;
+    margin-bottom:10px;
 }
-
-.post-img img{
-    position: absolute;
-    left: 0;
-    opacity: 1;
-    -moz-transition: opacity 1s ease-in-out;
-    -o-transition: opacity 1s ease-in-out;
-    transition: opacity 1s ease-in-out;
-    transition-delay: 6ms;
-    border-radius: 10px;
-}
-
-.post-img:hover img.img-back{
-    opacity: 0;
-    cursor: pointer;
-}
-
-.post-img:hover img.img-front{
-    opacity: 0;
+.post-img:hover{
+    background-image: url("https://static.mammut.com/cdn-cgi/image/width=1000,quality=50,f=auto,metadata=none/master/1016-00800-50031_mod-main-hf-png_236959.png");  /* Second Image URL */
 }
 
 .cate {
@@ -333,14 +321,93 @@ Body{
     font-size: 14px;
     padding: 8px 0px;
 }
-.cate ul li {
+.cate ul li,.color-list ul li {
     display:inline-block;
 }
+
+.color-list{
+    display:flex;
+    justify-content:center;
+}
+
+.color-list ul li .option1{
+  height: 13px;
+  width: 13px;
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+  border-radius: 50%;
+  display: inline-block;
+  cursor:pointer;
+}
+.color-list ul li .option2{
+    height: 13px;
+    width: 13px;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(110, 250, 147,1));
+    border-radius: 50%;
+    display: inline-block;
+    cursor:pointer;
+  }
+  .color-list ul li .option3{
+    height: 13px;
+    width: 13px;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(41, 30, 199,1));
+    border-radius: 50%;
+    display: inline-block;
+    cursor:pointer;
+  }
+  .color-list ul li .option4{
+    height: 13px;
+    width: 13px;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255, 225, 0,1));
+    border-radius: 50%;
+    display: inline-block;
+    cursor:pointer;
+  }
 /* end section grup */
 .Filter{
   background-color: var(--primary);
-  padding: 10px;
   border-radius: 7px;
 
 }
 
+.color-list{
+    display:flex;
+}
+
+.color-list .active:after{
+    content="";
+    width:22px;
+    height:22px;
+    border:1px solid #8888;
+    border-radius:50%;
+    color:white;
+}
+
+.option-color-1{
+    padding-left:10px;
+    margin-left:10px;
+    border-radius:50%;
+}
+
+#red {
+    background-color:red;
+    color:red;
+    padding:1px 5px;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+#black {
+    background-color:black;
+    color:black;
+    padding:1px 5px;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+#yellow{
+    background-color:yellow;
+    color:yellow;
+    padding:1px 5px;
+    border-radius:50%;
+    cursor:pointer;
+}
