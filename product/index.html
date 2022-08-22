@@ -167,13 +167,31 @@
                         <div class="product-top">
                             <div class="card-shop">
                                 <div class="post-shop">
-                                    <div class="all-shop">
+                                    <div class="all-shop" id="all-shop">
                                         <div class="post-img">
-                                            <img src="https://static.mammut.com/cdn-cgi/image/width=1000,quality=50,f=auto,metadata=none/master/1016-00800-50031_main-grey_229965.jpg" alt="" class="thumnail">
-                                            <img src="https://static.mammut.com/cdn-cgi/image/width=1000,quality=50,f=auto,metadata=none/master/1016-00800-50031_mod-main-hf-png_236959.png" alt="" class="img-back">
                                         </div>
                                         <div class="all-shop-content">
                                             <div class="post-top">
+                                                <div class="color-list">
+                                                    <ul>
+                                                        <li>
+                                                            <span onclick="getRandomColor()" class="option1">
+                                                            </span>
+                                                        </li>
+                                                        <li>
+                                                            <span onclick="getRandomColor()" class="option2">
+                                                            </span>
+                                                        </li>
+                                                        <li>
+                                                            <span onclick="getRandomColor()" class="option3">
+                                                            </span>
+                                                        </li>
+                                                        <li>
+                                                            <span onclick="getRandomColor()" class="option4">
+                                                            </span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                                 <div class="category-name">
                                                     <h1>Aegility FL Longsleeve Men</h1>
                                                 </div>
@@ -257,23 +275,18 @@ slider.oninput = function(){
 }
 </script>
 <script>
-    var readmore = document.getElementsByClassName('readmore');
-    var i;
-    var len = readmore.length;
-    for(i = 0; i < len; i++)
-    {
-        readmore[i].addEventListener('click', function(){
-            this.classList.toggle('active');
-            var list = this.nextElementSibling;
-            if(list.style.maxHeight)
-            {
-                list.style.maxHeight = null;
-            }
-            else
-            {
-                list.style.maxHeight = list.scrollHeight + 'px';
-            }
-        })
+    //The ColorCode() will give the code every time.
+    function ColorCode() {
+       var makingColorCode = '0123456789ABCDEF';
+       var finalCode = '#';
+       for (var counter = 0; counter < 6; counter++) {
+          finalCode =finalCode+ makingColorCode[Math.floor(Math.random() * 16)];
+       }
+       return finalCode;
     }
-</script>
+    //Function calling on button click.
+    function getRandomColor() {
+       $("#all-shop").css("background-color", ColorCode());
+    }
+ </script>
 </html>
