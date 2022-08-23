@@ -230,6 +230,22 @@
 .grid-cols-5 {
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
+.w-4\/5 {
+  width: 80%;
+}
+.my-1\/10 {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.mt-auto {
+  margin-top: auto;
+}
 @media screen and (max-width: 768px) {
   .sm-hidden {
     display: none;
