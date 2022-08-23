@@ -17,14 +17,18 @@ class Auth {
       if (select("nav.is-auth")) select("nav.is-auth").style.display = "flex";
       if (select("nav.not-auth")) select("nav.not-auth").style.display = "none";
       if (select("#app-bar")) select("#app-bar").classList.add("sm-block");
+      if (select("#side-bar")) select("#side-bar").classList.add("auth");
       if (select("#header")) select("#header").classList.add("sm-hidden");
       if (select(".user-email")) {
         select(".user-email").textContent = this.profile.email;
       }
+      if (window.location.pathname.includes("auth"))
+        window.location.replace("/");
     } else {
       if (select("nav.not-auth")) select("nav.not-auth").style.display = "flex";
       if (select("nav.is-auth")) select("nav.is-auth").style.display = "none";
       if (select("#app-bar")) select("#app-bar").classList.remove("sm-block");
+      if (select("#side-bar")) select("#side-bar").classList.remove("auth");
       if (select("#header")) select("#header").classList.remove("sm-hidden");
       if (select(".user-email")) {
         select(".user-email").textContent = "";
@@ -64,11 +68,8 @@ class Auth {
 
     if (!!userExists) {
       this.users.push(this.values);
-      this.profile = this.values;
-      console.log(this.values);
-      this.setUsers(this.currentUser, [this.values]);
       this.setUsers(this.listUser, this.users);
-      window.location.replace("/");
+      window.location.replace("/auth/login.html");
     } else {
       alert("User is already exists");
     }
