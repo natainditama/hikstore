@@ -1,41 +1,32 @@
-fetch('../data/products.json')
-.then(function(response){
-    return response.json()
-})
+fetch("../data/products.json")
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (product) {
+    let products = document.querySelector("#data-output");
 
-
-.then(function(product){
-    let products = document.querySelector(".all-shop-content");
-
-
-    let output = " ";
-
-    for(let item of product){
-        output =+ `
+    let output = "";
+    for (let item of product) {
+      output += `
 
         <div class="post-top">
-        <div class="color-list">
-            <ul>
-                <li>
-                    <span onclick="getRandomColor()" class="option1">
-                    </span>
-                </li>
-                <li>
-                    <span onclick="getRandomColor()" class="option2">
-                    </span>
-                </li>
-                <li>
-                    <span onclick="getRandomColor()" class="option3">
-                    </span>
-                </li>
-                <li>
-                    <span onclick="getRandomColor()" class="option4">
-                    </span>
-                </li>
-            </ul>
+        <div class="image-thumbnail">
+            <img src="${item.thumbnail}" alt="${item.title}" />
         </div>
-        <div class="category-name">
-            <h1>${item.title}</h1>
+        <div class="harga">
+            <h2>
+                Rp ${
+                  (item.price * 14000) // 1 dollar = 14.000 jadi dikali
+                    .toString() // dijadikan string
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ".") // regex setelah angka 3 isi titik
+                }
+            </h2>
+            <button class="text-xl">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+        </div>
+        <div class="category-name text-xl">
+            <h2>${item.title}</h2>
         </div>
         <div class="cate">
             <ul>
@@ -43,15 +34,10 @@ fetch('../data/products.json')
                 <li><a href="#">${item.categories[1]}</a></li>
             </ul>
         </div>
-        <div class="harga">
-            <h2>
-                ${item.price}
-            </h2>
-        </div>
     </div> 
 
-      `
+      `;
     }
 
-   products.innerHTML = output
-})
+    products.innerHTML = output;
+  });

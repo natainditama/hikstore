@@ -1,177 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/f3d2ade942.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../css/main.css">
-    <script src="./script.js"></script>
-    <script src="https://kit.fontawesome.com/f3d2ade942.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/f3d2ade942.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/f3d2ade942.js"
+      crossorigin="anonymous"
+    ></script>
     <title>List Product</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container mx-lg">
-        <div class="sidebar-top">
-            <h1>Product</h1>
-            <h2>
-                <a href="#">Home</a>
-                /
-                <a href="#">Shop</a>
-            </h2>
-            <div class="Filter">
-                <div class="icon">
-                </div>
-                <span><i class="fad fa-sort-alt"></i>Filter</span>
-            </div>
+      <div class="sidebar-top">
+        <h1>Product</h1>
+        <h2>
+          <a href="#">Home</a>
+          /
+          <a href="#">Shop</a>
+        </h2>
+        <div class="Filter">
+          <div class="icon"></div>
+          <span><i class="fad fa-sort-alt"></i>Filter</span>
         </div>
-        <div class="content">
-            <div class="content_wrapper">
-                <div class="sidebar">
-                    <div class="section-sidebar">
-                        <div class="sidebar-wrap">
-                            <div class="categori">
-                                <h5>Filter by Cattegory:</h5>
-                                <div class="icons">
-                                    <i class="fa-solid fa-angle-down"></i>
-                                </div>
-                            </div>
-                            <div class="list-categori">
-                              <ul>
-                                  <li><a href="#">Hardshell Jackets</a></li>
-                                  <li><a href="#">Windbreaker</a></li>
-                                  <li><a href="#">Vests</a></li>
-                                  <li><a href="#">Ski & Snowboard Jackets</a></li>
-                                  <li><a href="#">Casual Shoes</a></li>
-                                  <li><a href="#">Hiking Shoes</a></li>
-                              </ul>
-                            </div>
-                        </div>
-                        <div class="sidebar-warp-2">
-                            <div class="title">
-                                <h1>Filter by price:</h1>
-                            </div>
-                            <div class="price-box">
-                                <div class="slide">
-                                    <input type="range" min="0" max="40" value="10" id="input-slide">
-                                    <div class="price">
-                                        <div class="price-text-1">
-                                            <p>filter</p>
-                                        </div>
-                                        <div class="price-text-2" id="text-price">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sidear-wrap-3">
-                            <div class="title-1">
-                                <h1>Filter by Color:</h1>
-                            </div>
-                            <div class="option-color">
-                                <ul>
-                                    <li>
-                                        <span class="option-color" data-color="#9be8d3" style="background-color: #000000;" >
-                                            <input type="checkbox" style="opacity: 0;">
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span class="option-color" data-color="#9be8d3" style="background-color: #ff0000;" >
-                                            <input type="checkbox" style="opacity: 0;">
-                                        </span>
-                                    </li>                 
-                                    <li>
-                                        <span class="option-color" data-color="#9be8d3" style="background-color: #ffbb00;" >
-                                            <input type="checkbox" style="opacity: 0;">
-                                        </span>
-                                    </li> 
-                                    <li>
-                                        <span class="option-color" data-color="#9be8d3" style="background-color: #0004ff;" >
-                                            <input type="checkbox" style="opacity: 0;">
-                                        </span>
-                                    </li> 
-                                    <li>
-                                        <span class="option-color" data-color="#9be8d3" style="background-color: #fdf908;" >
-                                            <input type="checkbox" style="opacity: 0;">
-                                        </span>
-                                    </li> 
-                                    <li>
-                                        <span class="option-color" data-color="#9be8d3" style="background-color: White" >
-                                            <input type="checkbox" style="opacity: 0;">
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span class="option-color" data-color="#9be8d3" style="background-color: Green;" >
-                                            <input type="checkbox" style="opacity: 0;">
-                                        </span>
-                                    </li> 
-                                    <li>
-                                        <span class="option-color" data-color="#9be8d3" style="background-image: linear-gradient(to bottom right, red, yellow);" >
-                                            <input type="checkbox" style="opacity: 0;">
-                                        </span>
-                                    </li>  
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="sidebar-wrap-4">
-                            <div class="title-2">
-                                <h1>Filter by Gender:</h1>
-                            </div>
-                            <div class="option-gender">
-                                <button>
-                                    <a href="#">Men</a>
-                                </button>
-                                <button>
-                                    <a href="#">Women</a>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="sidebar-wrap-5">
-                            <div class="size">
-                                <h1>Size:</h1>
-                            </div>
-                            <div class="option-size">
-                                <button>
-                                    <a href="#">S</a>
-                                </button>
-                                <button>
-                                    <a href="#">M</a>
-                                </button>
-                                <button>
-                                    <a href="#">L</a>
-                                </button>
-                                <button>
-                                    <a href="#">XL</a>
-                                </button>
-                                <button>
-                                    <a href="#">XXL</a>
-                                </button>
-                                <button>
-                                    <a href="#">XXXL</a>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+      </div>
+      <div class="content">
+        <div class="content_wrapper">
+          <div class="sidebar">
+            <div class="section-sidebar">
+              <div class="sidebar-wrap">
+                <div class="categori">
+                  <h5>Filter by Cattegory:</h5>
+                  <div class="icons">
+                    <i class="fa-solid fa-angle-down"></i>
+                  </div>
                 </div>
-                <div class="shop-section">
-                    <div class="shop-title">
-                        <div class="text">
-                            <h1>Showing 1–4 of 20 results</h1>
-                        </div>
-                        <div class="category-top">
-                            
-                        </div>
+                <div class="list-categori">
+                  <ul>
+                    <li><a href="#">Hardshell Jackets</a></li>
+                    <li><a href="#">Windbreaker</a></li>
+                    <li><a href="#">Vests</a></li>
+                    <li><a href="#">Ski & Snowboard Jackets</a></li>
+                    <li><a href="#">Casual Shoes</a></li>
+                    <li><a href="#">Hiking Shoes</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="sidebar-warp-2">
+                <div class="title">
+                  <h1>Filter by price:</h1>
+                </div>
+                <div class="price-box">
+                  <div class="slide">
+                    <input
+                      type="range"
+                      min="0"
+                      max="40"
+                      value="10"
+                      id="input-slide"
+                    />
+                    <div class="price">
+                      <div class="price-text-1">
+                        <p>filter</p>
+                      </div>
+                      <div class="price-text-2" id="text-price"></div>
                     </div>
-                    <div class="sections_group" id="data-output">
-                       <div class="product-top">
-                            <div class="card-shop">
-                                <div class="post-shop">
-                                    <div class="all-shop" id="all-shop">
-                                        <div class="post-img">
-                                        </div>
-                                        <div class="all-shop-content" id="all-shop-content">
-                                            <!-- <div class="post-top">
+                  </div>
+                </div>
+              </div>
+              <div class="sidear-wrap-3">
+                <div class="title-1">
+                  <h1>Filter by Color:</h1>
+                </div>
+                <div class="option-color">
+                  <ul>
+                    <li>
+                      <span
+                        class="option-color"
+                        data-color="#9be8d3"
+                        style="background-color: #000000"
+                      >
+                        <input type="checkbox" style="opacity: 0" />
+                      </span>
+                    </li>
+                    <li>
+                      <span
+                        class="option-color"
+                        data-color="#9be8d3"
+                        style="background-color: #ff0000"
+                      >
+                        <input type="checkbox" style="opacity: 0" />
+                      </span>
+                    </li>
+                    <li>
+                      <span
+                        class="option-color"
+                        data-color="#9be8d3"
+                        style="background-color: #ffbb00"
+                      >
+                        <input type="checkbox" style="opacity: 0" />
+                      </span>
+                    </li>
+                    <li>
+                      <span
+                        class="option-color"
+                        data-color="#9be8d3"
+                        style="background-color: #0004ff"
+                      >
+                        <input type="checkbox" style="opacity: 0" />
+                      </span>
+                    </li>
+                    <li>
+                      <span
+                        class="option-color"
+                        data-color="#9be8d3"
+                        style="background-color: #fdf908"
+                      >
+                        <input type="checkbox" style="opacity: 0" />
+                      </span>
+                    </li>
+                    <li>
+                      <span
+                        class="option-color"
+                        data-color="#9be8d3"
+                        style="background-color: White"
+                      >
+                        <input type="checkbox" style="opacity: 0" />
+                      </span>
+                    </li>
+                    <li>
+                      <span
+                        class="option-color"
+                        data-color="#9be8d3"
+                        style="background-color: Green"
+                      >
+                        <input type="checkbox" style="opacity: 0" />
+                      </span>
+                    </li>
+                    <li>
+                      <span
+                        class="option-color"
+                        data-color="#9be8d3"
+                        style="
+                          background-image: linear-gradient(
+                            to bottom right,
+                            red,
+                            yellow
+                          );
+                        "
+                      >
+                        <input type="checkbox" style="opacity: 0" />
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="sidebar-wrap-4">
+                <div class="title-2">
+                  <h1>Filter by Gender:</h1>
+                </div>
+                <div class="option-gender">
+                  <button>
+                    <a href="#">Men</a>
+                  </button>
+                  <button>
+                    <a href="#">Women</a>
+                  </button>
+                </div>
+              </div>
+              <div class="sidebar-wrap-5">
+                <div class="size">
+                  <h1>Size:</h1>
+                </div>
+                <div class="option-size">
+                  <button>
+                    <a href="#">S</a>
+                  </button>
+                  <button>
+                    <a href="#">M</a>
+                  </button>
+                  <button>
+                    <a href="#">L</a>
+                  </button>
+                  <button>
+                    <a href="#">XL</a>
+                  </button>
+                  <button>
+                    <a href="#">XXL</a>
+                  </button>
+                  <button>
+                    <a href="#">XXXL</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="shop-section">
+            <div class="shop-title">
+              <div class="text">
+                <h1>Showing 1–4 of 20 results</h1>
+              </div>
+              <div class="category-top"></div>
+            </div>
+            <div class="sections_group" id="data-output">
+              <div class="product-top">
+                <div class="card-shop">
+                  <div class="post-shop">
+                    <div class="all-shop" id="all-shop">
+                      <div class="post-img"></div>
+                      <div class="all-shop-content" id="all-shop-content">
+                        <!-- <div class="post-top">
                                                 <div class="color-list">
                                                     <ul>
                                                         <li>
@@ -207,57 +251,53 @@
                                                     </h2>
                                                 </div>
                                             </div>          -->
-                                        </div>
-                                        </div>
-                                  </div>
-                            </div>
-                        </div>
-                        </div>
-                     </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
+            </div>
+          </div>
         </div>
-        </div>
+      </div>
     </div>
-</body>
-<script>
-    var categori = document.getElementsByClassName('categori');
+    <script src="./script.js"></script>
+  </body>
+  <script>
+    var categori = document.getElementsByClassName("categori");
     var i;
     var len = categori.length;
-    for(i = 0; i < len; i++)
-    {
-        categori[i].addEventListener('click', function(){
-            this.classList.toggle('active');
-            var list = this.nextElementSibling;
-            if(list.style.maxHeight)
-            {
-                list.style.maxHeight = null;
-            }
-            else
-            {
-                list.style.maxHeight = list.scrollHeight + 'px';
-            }
-        })
+    for (i = 0; i < len; i++) {
+      categori[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var list = this.nextElementSibling;
+        if (list.style.maxHeight) {
+          list.style.maxHeight = null;
+        } else {
+          list.style.maxHeight = list.scrollHeight + "px";
+        }
+      });
     }
-</script>
-<script>
-var slider = document.getElementById("input-slide");
-var value = document.getElementById("text-price");
-value.textContent = slider.value;
-slider.oninput = function(){
-    value.textContent = this.value;
-}
-</script>
-<script>
+  </script>
+  <script>
+    var slider = document.getElementById("input-slide");
+    var value = document.getElementById("text-price");
+    value.textContent = slider.value;
+    slider.oninput = function () {
+      value.textContent = this.value;
+    };
+  </script>
+  <script>
     function ColorCode() {
-       var makingColorCode = '0123456789ABCDEF';
-       var finalCode = '#';
-       for (var counter = 0; counter < 6; counter++) {
-          finalCode =finalCode+ makingColorCode[Math.floor(Math.random() * 16)];
-       }
-       return finalCode;
+      var makingColorCode = "0123456789ABCDEF";
+      var finalCode = "#";
+      for (var counter = 0; counter < 6; counter++) {
+        finalCode = finalCode + makingColorCode[Math.floor(Math.random() * 16)];
+      }
+      return finalCode;
     }
     function getRandomColor() {
-       $("#all-shop").css("background-color", ColorCode());
+      $("#all-shop").css("background-color", ColorCode());
     }
- </script>
+  </script>
 </html>
