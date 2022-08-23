@@ -40,9 +40,32 @@ Body{
     margin: 60px 30px;
     overflow-y: scroll;
     height: 60%;
+   
+}
 
+.section-sidebar::-webkit-scrollbar-track {
+    border: 1px solid #000;
+    padding: 2px 0;
+    border-radius: 40px;
+}
+  
+  .section-sidebar::-webkit-scrollbar {
+    width: 10px;
+}
+  
+  .section-sidebar::-webkit-scrollbar-thumb {
+    border-radius: 40px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #737272;
+    border: 1px solid #000;
 }
 /* start category */
+.sidebar-wrap{
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-right: 10px;
+    padding-left: 3px;
+}
 .categori{
     cursor: pointer;
     border-radius: 50px;
@@ -93,6 +116,10 @@ Body{
 /* start filter price */
 .sidebar-warp-2{
     margin-top: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-right: 10px;
+    padding-left: 3px;
 }
 .sidebar-warp-2 h1{
     font-size: 18px;
@@ -100,6 +127,9 @@ Body{
     padding: 7px 0px 7px 0;
     font-weight: 900;
     
+}
+.price-box{
+    padding-left:4px;
 }
 .price-box .slide input{
     width: 90%;
@@ -133,6 +163,7 @@ Body{
     padding: 9px 12px;
     margin-right: 8px; 
     cursor: pointer;
+    padding-bottom:8px;
 }
 .price-text-2{
     margin-top:7px;
@@ -173,6 +204,10 @@ Body{
 /* start color */
 .sidear-wrap-3 {
     margin-top: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-right: 10px;
+    padding-left: 3px;
 }
 .sidear-wrap-3 h1{
     font-size: 18px;
@@ -201,6 +236,11 @@ Body{
 /* start gender */
 .sidebar-wrap-4{
     margin-top: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-right: 10px;
+    padding-left: 9px;
+    padding-bottom:8px;
 }
 
 .sidebar-wrap-4 button{
@@ -227,6 +267,11 @@ Body{
 /* start size */
 .sidebar-wrap-5{
     margin-top: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-right: 10px;
+    padding-left: 3px;
+    
 }
 .sidebar-wrap-5 h1 {
     font-size: 18px;
