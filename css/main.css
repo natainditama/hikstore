@@ -94,6 +94,9 @@ video {
   max-width: 100%;
   height: auto;
 }
+main {
+  min-height: 100vh;
+}
 /* ===== Components ===== */
 .menu-icon {
   --color: var(--black);
