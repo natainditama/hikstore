@@ -24,10 +24,9 @@ addEvent(
   "click",
   ".btn-menu",
   function () {
-    const menuIcon = select(".menu-icon", false, this);
-    menuIcon.classList.toggle("is-open");
     const sidebar = select("#side-bar");
     if (sidebar) sidebar.classList.toggle("is-open");
+    toggleMenuIcons();
   },
   true
 );
@@ -44,6 +43,22 @@ if (navLinks) {
     const route = item.getAttribute("href");
     if (location == route) item.classList.add("current");
   });
+}
+
+function toggleMenuIcons() {
+  const menuIcons = select(".menu-icon", true);
+  const sidebar = select("#side-bar");
+  if (menuIcons && sidebar) {
+    if (sidebar.classList.contains("is-open")) {
+      menuIcons.forEach(function (menu) {
+        menu.classList.add("is-open");
+      });
+    } else {
+      menuIcons.forEach(function (menu) {
+        menu.classList.remove("is-open");
+      });
+    }
+  }
 }
 
 console.log("Loaded");
