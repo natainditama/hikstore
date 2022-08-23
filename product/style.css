@@ -391,7 +391,7 @@ Body{
 .color-list ul li .option1{
   height: 13px;
   width: 13px;
-  background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+  background-color: cadetblue;
   border-radius: 50%;
   display: inline-block;
   cursor:pointer;
@@ -399,7 +399,7 @@ Body{
 .color-list ul li .option2{
     height: 13px;
     width: 13px;
-    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(110, 250, 147,1));
+    background-color: antiquewhite;
     border-radius: 50%;
     display: inline-block;
     cursor:pointer;
@@ -407,7 +407,7 @@ Body{
   .color-list ul li .option3{
     height: 13px;
     width: 13px;
-    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(41, 30, 199,1));
+    background-color: aqua;
     border-radius: 50%;
     display: inline-block;
     cursor:pointer;
@@ -415,7 +415,7 @@ Body{
   .color-list ul li .option4{
     height: 13px;
     width: 13px;
-    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255, 225, 0,1));
+    background-color: aquamarine;
     border-radius: 50%;
     display: inline-block;
     cursor:pointer;
@@ -432,7 +432,7 @@ Body{
 }
 
 .color-list .active:after{
-    content="";
+    content:"";
     width:22px;
     height:22px;
     border:1px solid #8888;
@@ -469,3 +469,4 @@ Body{
     border-radius:50%;
     cursor:pointer;
 }
+
