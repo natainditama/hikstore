@@ -522,6 +522,13 @@ Body {
         gap: 20px;
     }
 
-
+    .sidebar-top {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 32px 0px;
+        margin-right: 136px;
+    }
     
 }
