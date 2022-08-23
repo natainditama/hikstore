@@ -35,6 +35,12 @@
 .h-12 {
   height: 3rem;
 }
+.w-10 {
+  width: 2.5rem;
+}
+.h-10 {
+  height: 2.5rem;
+}
 .h-4 {
   height: 1rem;
 }
@@ -114,6 +120,9 @@
 }
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 .h-full {
   height: 100%;
@@ -245,6 +254,22 @@
 }
 .mt-auto {
   margin-top: auto;
+}
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.w-1\/2 {
+  width: 50%;
+}
+.bg-facebook {
+  background-color: #1877f2;
+}
+.bg-instagram {
+  background-color: #e4405f;
+}
+.bg-twitter {
+  background-color: #1da1f2;
 }
 @media screen and (max-width: 768px) {
   .sm-hidden {

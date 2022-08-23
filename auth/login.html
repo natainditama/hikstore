@@ -3,13 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <title>Log in - Hikstore</title>
-    <meta name="description" content="" />
+    <meta
+      name="description"
+      content="Hikstore offers a wide selection of Clothing, Shoes, Technical Hardware & Avalanche Safety Equipment. Everyone is welcomed in our online shop"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta property="og:title" content="" />
-    <meta property="og:type" content="" />
-    <meta property="og:url" content="" />
+    <meta property="og:title" content="Log in - Hikstore" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hikstore.pages.dev/auth/login" />
     <meta property="og:image" content="" />
+    <meta property="og:locale" content="en" />
+    <link rel="canonical" href="https://hikstore.pages.dev/auth/signup" />
     <meta name="theme-color" content="#f4f4f5" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="shortcut icon" href="/img/icons/favicon.ico" />
@@ -90,7 +95,7 @@
           <div
             class="flex-col justify-center items-center h-full sm-row-span-2"
           >
-            <h2 class="text-4xl mb-2">Log in</h2>
+            <h1 class="text-4xl mb-2">Log in</h2>
             <p class="text-lg mb-6">Login to access your account</p>
             <form
               action=""
@@ -140,17 +145,18 @@
       </section>
     </main>
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-5B7R2F5EPV"
+    ></script>
     <script>
-      window.ga = function () {
-        ga.q.push(arguments);
-      };
-      ga.q = [];
-      ga.l = +new Date();
-      ga("create", "G-5B7R2F5EPV", "auto");
-      ga("set", "anonymizeIp", true);
-      ga("set", "transport", "beacon");
-      ga("send", "pageview");
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-5B7R2F5EPV");
     </script>
-    <script src="https://www.google-analytics.com/analytics.js" async></script>
   </body>
 </html>
