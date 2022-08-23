@@ -2,14 +2,19 @@
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Hikstore</title>
-    <meta name="description" content="" />
+    <title>Hikstore - Hiking Store</title>
+    <meta
+      name="description"
+      content="Everything you need for your next Mountain Adventure is available online. Check out Clothing, Shoes, Technical Hardware & Avalanche Safety Equipment."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta property="og:title" content="" />
-    <meta property="og:type" content="" />
-    <meta property="og:url" content="" />
+    <meta property="og:title" content="Hikstore - Hiking Store" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hikstore.pages.dev/" />
     <meta property="og:image" content="" />
+    <meta property="og:locale" content="en" />
+    <link rel="canonical" href="https://hikstore.pages.dev/" />
     <meta name="theme-color" content="#f4f4f5" />
     <meta name="msapplication-TileColor" content="#f4f4f5" />
     <meta name="msapplication-config" content="browserconfig.xml" />
@@ -104,7 +109,7 @@
       class="fixed inset-0 top-auto h-20 z-100 bg-gray -shadow-md hidden"
     >
       <div class="grid h-full grid-cols-5">
-        <a href="/" class="flex-row items-center justify-center">
+        <a href="/index.html" class="flex-row items-center justify-center">
           <img
             class="h-12"
             draggable="false"
@@ -159,7 +164,10 @@
           <span class="text-xl">Home</span>
           <i class="fa-solid fa-arrow-right"></i>
         </a>
-        <a href="#" class="nav-link flex-row justify-between items-center">
+        <a
+          href="/about.html"
+          class="nav-link flex-row justify-between items-center"
+        >
           <span class="text-xl">About</span>
           <i class="fa-solid fa-arrow-right"></i>
         </a>
@@ -170,7 +178,13 @@
           <span class="text-xl">Product</span>
           <i class="fa-solid fa-arrow-right"></i>
         </a>
-        <a href="#" class="nav-link text-xl">Wishlist</a>
+        <a
+          href="/contact.html"
+          class="nav-link flex-row justify-between items-center"
+        >
+          <span class="text-xl">Contact Us</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
         <div
           class="user-guest mt-auto flex-row items-center gap-4 text-white text-center"
         >
@@ -189,18 +203,19 @@
         </div>
       </nav>
     </aside>
-    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-5B7R2F5EPV"
+    ></script>
     <script>
-      window.ga = function () {
-        ga.q.push(arguments);
-      };
-      ga.q = [];
-      ga.l = +new Date();
-      ga("create", "G-5B7R2F5EPV", "auto");
-      ga("set", "anonymizeIp", true);
-      ga("set", "transport", "beacon");
-      ga("send", "pageview");
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-5B7R2F5EPV");
     </script>
-    <script src="https://www.google-analytics.com/analytics.js" async></script>
   </body>
 </html>
