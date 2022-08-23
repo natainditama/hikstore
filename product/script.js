@@ -5,7 +5,7 @@ fetch('../data/products.json')
 
 
 .then(function(product){
-    let products = document.querySelector(".sections_group");
+    let products = document.querySelector(".all-shop-content");
 
 
     let output = " ";
@@ -39,8 +39,8 @@ fetch('../data/products.json')
         </div>
         <div class="cate">
             <ul>
-                <li><a href="#">${item.categories}</a></li>
-                <li><a href="#">${item.categories}</a></li>
+                <li><a href="#">${item.categories[0]}</a></li>
+                <li><a href="#">${item.categories[1]}</a></li>
             </ul>
         </div>
         <div class="harga">
@@ -51,8 +51,6 @@ fetch('../data/products.json')
     </div> 
 
       `
-        
-
     }
 
    products.innerHTML = output
