@@ -518,7 +518,7 @@ Body {
 
     .sections_group {
         display: grid;
-        grid-template-columns: repeat(1, 341px);
+        grid-template-columns: repeat(1, 281px);
         gap: 20px;
         margin-left: 57px;
     }
