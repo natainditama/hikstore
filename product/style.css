@@ -471,3 +471,63 @@ Body {
   align-items: center;
   margin-top: 1rem;
 }
+
+@media screen and (max-width:1026px) {
+
+    .sections_group {
+        display: grid;
+        grid-template-columns: repeat(3, 222px);
+        gap: 20px;
+        margin-left: 20px;
+    }
+    
+}
+
+@media screen and (max-width:1294px){
+
+    .sections_group {
+        display: grid;
+        grid-template-columns: repeat(3, 222px);
+        gap: 20px;
+        margin-left: 20px;
+    }
+}
+
+
+@media screen and (max-width:725px)
+{
+.sidebar{
+    display: none;
+}
+}
+
+@media screen and (max-width:638px){
+
+    .sections_group {
+        display: grid;
+        grid-template-columns: repeat(2, 268px);
+        gap: 20px;
+        margin-left: 20px;
+    }
+    .sidebar{
+        display: none;
+    }
+}
+
+@media screen and (max-width:496px){
+
+    .sections_group {
+        display: grid;
+        grid-template-columns: repeat(1, 346px);
+        gap: 20px;
+    }
+
+    .sidebar-top {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 32px 0px;
+    }
+    
+}
