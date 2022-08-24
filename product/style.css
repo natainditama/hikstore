@@ -505,7 +505,7 @@ Body {
 
     .sections_group {
         display: grid;
-        grid-template-columns: repeat(2, 222px);
+        grid-template-columns: repeat(2, 268px);
         gap: 20px;
         margin-left: 20px;
     }
@@ -518,7 +518,7 @@ Body {
 
     .sections_group {
         display: grid;
-        grid-template-columns: repeat(1, 281px);
+        grid-template-columns: repeat(1, 346px);
         gap: 20px;
     }
 
@@ -528,7 +528,6 @@ Body {
         justify-content: center;
         align-items: center;
         padding: 32px 0px;
-        margin-right: 136px;
     }
     
 }
