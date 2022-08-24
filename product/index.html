@@ -26,13 +26,17 @@
           <a href="#">Shop</a>
         </h2>
         <div class="Filter">
-          <div class="icon"></div>
-          <span><i class="fad fa-sort-alt"></i>Filter</span>
+          <div class="icon">
+            <button data-modal-target="#sidebar">Filter</button>
+          </div>
         </div>
       </div>
       <div class="content">
         <div class="content_wrapper">
-          <div class="sidebar">
+          <div class="sidebar" id="sidebar">
+            <button data-close-button id="sidebar-close" class="sidebar-close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
             <div class="section-sidebar">
               <div class="sidebar-wrap">
                 <div class="categori">
@@ -52,28 +56,6 @@
                   </ul>
                 </div>
               </div>
-              <!-- <div class="sidebar-warp-2">
-                <div class="title">
-                  <h1>Filter by price:</h1>
-                </div>
-                <div class="price-box">
-                  <div class="slide">
-                    <input
-                      type="range"
-                      min="0"
-                      max="40"
-                      value="10"
-                      id="input-slide"
-                    />
-                    <div class="price">
-                      <div class="price-text-1">
-                        <p>filter</p>
-                      </div>
-                      <div class="price-text-2" id="text-price"></div>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
               <div class="sidear-wrap-3">
                 <div class="title-1">
                   <h1>Filter by Color:</h1>
@@ -200,6 +182,7 @@
                 </div>
               </div>
             </div>
+            <div class="" id="overlay"></div>
           </div>
           <div class="shop-section">
             <div class="shop-title">
@@ -244,14 +227,6 @@
     }
   </script>
   <script>
-    var slider = document.getElementById("input-slide");
-    var value = document.getElementById("text-price");
-    value.textContent = slider.value;
-    slider.oninput = function () {
-      value.textContent = this.value;
-    };
-  </script>
-  <script>
     function ColorCode() {
       var makingColorCode = "0123456789ABCDEF";
       var finalCode = "#";
@@ -263,5 +238,43 @@
     function getRandomColor() {
       $("#all-shop").css("background-color", ColorCode());
     }
+  </script>
+  <script>
+    const openmodal = document.querySelectorAll("[data-modal-target]");
+    const closemodal =  document.querySelectorAll("[data-close-button]");
+    const overlay = document.getElementById('overlay')
+
+    openmodal.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = document.querySelector(button.dataset.modalTarget)
+    openModal(modal)
+  })
+})
+
+overlay.addEventListener('click', () => {
+  const modals = document.querySelectorAll('.sidebar.active')
+  modals.forEach(modal => {
+    closeModal(modal)
+  })
+})
+
+closemodal.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('.sidebar')
+    closeModal(modal)
+  })
+})
+
+function openModal(modal) {
+  if (modal == null) return
+  modal.classList.add('active')
+  overlay.classList.add('active')
+}
+
+function closeModal(modal) {
+  if (modal == null) return
+  modal.classList.remove('active')
+  overlay.classList.remove('active')
+}
   </script>
 </html>
