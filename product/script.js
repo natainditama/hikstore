@@ -21,7 +21,8 @@ fetch("../data/products.json")
                     .replace(/\B(?=(\d{3})+(?!\d))/g, ".") // regex setelah angka 3 isi titik
                 }
             </h2>
-            <button class="text-xl">
+            <button class="text-xl btn" id="btn">
+                <i class="fa-solid fa-cart-plus"></i>
                 <i class="fa-regular fa-heart"></i>
             </button>
         </div>
@@ -34,6 +35,7 @@ fetch("../data/products.json")
                 <li><a href="#">${item.categories[1]}</a></li>
             </ul>
         </div>
+        
     </div> 
 
       `;

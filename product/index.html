@@ -38,21 +38,47 @@
                 <i class="fa-solid fa-xmark"></i>
             </button>
             <div class="section-sidebar">
+              <div class="top-content-sidebar">
+                <div class="title-sidebar">
+                  <h2>Selected Filters</h2>
+                </div>
+                <div class="clear-sidebar">
+                  <h1>Clear All</h1>
+                </div>
+              </div>
               <div class="sidebar-wrap">
                 <div class="categori">
                   <h5>Filter by Cattegory:</h5>
-                  <div class="icons">
+                  <!-- <div class="icons">
                     <i class="fa-solid fa-angle-down"></i>
-                  </div>
+                  </div> -->
                 </div>
                 <div class="list-categori">
                   <ul>
-                    <li><a href="#">Hardshell Jackets</a></li>
-                    <li><a href="#">Windbreaker</a></li>
-                    <li><a href="#">Vests</a></li>
-                    <li><a href="#">Ski & Snowboard Jackets</a></li>
-                    <li><a href="#">Casual Shoes</a></li>
-                    <li><a href="#">Hiking Shoes</a></li>
+                    <li>
+                      <input type="checkbox">
+                      <a href="#">Hardshell Jackets</a>
+                    </li>
+                    <li>
+                      <input type="checkbox">
+                      <a href="#">Windbreaker</a>
+                    </li>
+                    <li>
+                      <input type="checkbox">
+                      <a href="#">Vests</a>
+                    </li>
+                    <li>
+                      <input type="checkbox">
+                      <a href="#">Ski & Snowboard Jackets</a>
+                    </li>
+                    <li>
+                      <input type="checkbox">
+                      <a href="#">Casual Shoes</a>
+                    </li>
+                    <li>
+                      <input type="checkbox">
+                      <a href="#">Hiking Shoes</a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -60,7 +86,7 @@
                 <div class="title-1">
                   <h1>Filter by Color:</h1>
                 </div>
-                <div class="option-color">
+                <div class="-wrap-option-color">
                   <ul>
                     <li>
                       <span
@@ -111,7 +137,7 @@
                       <span
                         class="option-color"
                         data-color="#9be8d3"
-                        style="background-color: White"
+                        style="background-color: rgb(214, 173, 173)"
                       >
                         <input type="checkbox" style="opacity: 0" />
                       </span>
@@ -181,6 +207,14 @@
                   </button>
                 </div>
               </div>
+              <div class="apply-filter">
+                <button>
+                  <a href="#">apply filter</a>
+                </button>
+                <div class="empty">
+                  <i class="fa-solid fa-trash-can"></i>
+                </div>
+              </div>
             </div>
             <div class="" id="overlay"></div>
           </div>
@@ -188,6 +222,9 @@
             <div class="shop-title">
               <div class="text">
                 <h1>Showing 1–4 of 20 results</h1>
+              </div>
+              <div class="sort-section">
+                <h1>Sort: Popular | New | Discount | Price: Low/High</h1>
               </div>
               <div class="category-top"></div>
             </div>
@@ -210,7 +247,7 @@
     </div>
     <script src="./script.js"></script>
   </body>
-  <script>
+  <!-- <script>
     var categori = document.getElementsByClassName("categori");
     var i;
     var len = categori.length;
@@ -225,7 +262,7 @@
         }
       });
     }
-  </script>
+  </script> -->
   <script>
     function ColorCode() {
       var makingColorCode = "0123456789ABCDEF";
@@ -276,5 +313,14 @@ function closeModal(modal) {
   modal.classList.remove('active')
   overlay.classList.remove('active')
 }
+  </script>
+  <script>
+const heartButtons = document.querySelectorAll(".btn");
+
+heartButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    button.classList.toggle("clicked");
+  });
+});
   </script>
 </html>
