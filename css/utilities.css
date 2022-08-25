@@ -341,6 +341,46 @@
 .top-0 {
   top: 0;
 }
+.w-max {
+  width: max-content;
+}
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.btn {
+  background-color: transparent;
+  color: var(--black);
+  position: relative;
+  overflow: hidden;
+  box-shadow: none;
+  transition-property: color;
+  transition-duration: 0.2s;
+  transition-delay: 0.1s;
+  transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+}
+.btn:hover {
+  color: var(--white);
+  transition-duration: 0.3s;
+  /* transition-delay: 0.5s; */
+  transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  z-index: -1;
+  height: 100%;
+  background-color: var(--primary);
+  transition-property: width;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+}
+.btn:hover::after {
+  width: 100%;
+}
 @media screen and (max-width: 768px) {
   .sm-hidden {
     display: none;
