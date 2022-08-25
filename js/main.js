@@ -31,10 +31,15 @@ addEvent(
   true
 );
 
-addEvent("click", ".logout", function () {
-  const confirm = window.confirm("Are you sure to logout?");
-  if (confirm) auth.logout();
-});
+addEvent(
+  "click",
+  ".logout",
+  function () {
+    const confirm = window.confirm("Are you sure to logout?");
+    if (confirm) auth.logout();
+  },
+  true
+);
 
 const navLinks = select(".nav-link", true);
 if (navLinks) {

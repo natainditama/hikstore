@@ -105,12 +105,11 @@
                 >0</span
               >
             </button>
-            <a
-              href="/auth/login.html"
-              class="text-xl flex-row items-center border-l px-5 py-2 h-full"
+            <button
+              class="user-profile logout text-xl flex-row items-center border-l px-5 py-2 h-full"
             >
               <i class="fa-regular fa-user"></i>
-            </a>
+            </button>
             <button
               class="btn-menu flex-row items-center gap-2 hidden sm-flex border-l px-5 py-2 h-full"
             >
@@ -118,21 +117,13 @@
                 <span></span>
               </span>
             </button>
-          </nav>
-          <!-- <nav class="flex-row items-center gap-2 hidden">
-            <a
-              href="/auth/login.html"
-              class="border-2 border-primary rounded px-5 py-2 sm-hidden"
-            >
-              Log In
-            </a>
             <a
               href="/auth/signup.html"
-              class="border-2 border-primary text-white bg-primary rounded px-5 py-2 sm-hidden"
+              class="border-2 border-primary text-white bg-primary rounded px-5 py-2 w-full sm-hidden w-max not-auth"
             >
               Sign Up
             </a>
-          </nav> -->
+          </nav>
         </div>
       </div>
     </header>
@@ -153,7 +144,7 @@
           />
         </a>
         <button class="text-2xl">
-          <i class="fa-regular fa-magnifying-glass"></i>
+          <i class="fa-regular fa-heart"></i>
         </button>
         <div class="relative">
           <button
@@ -173,7 +164,9 @@
             >
           </div>
         </button>
-        <button class="text-2xl flex-col justify-center items-center">
+        <button
+          class="user-profile text-2xl flex-col justify-center items-center"
+        >
           <i class="fa-regular fa-user"></i>
         </button>
       </div>
@@ -185,7 +178,9 @@
       <nav class="flex-col gap-4 relative w-4/5 mx-auto h-full my-1/10">
         <div class="user-area flex-row items-center justify-between gap-2 mb-4">
           <div class="text-white flex-row items-center gap-2">
-            <i class="fa-regular fa-user text-xl"></i>
+            <span class="user-profile text-xl">
+              <i class="fa-regular fa-user"></i>
+            </span>
             <span class="text-lg user-email"></span>
           </div>
           <button

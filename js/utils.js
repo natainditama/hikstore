@@ -18,4 +18,11 @@ const addEvent = (type, el, listener, all = false) => {
   }
 };
 
-export { select, addEvent };
+const getRandomAvatar = () => {
+  const url = "https://randomuser.me/api/";
+  return fetch(url)
+    .then((response) => response.json())
+    .then((data) => data);
+};
+
+export { select, addEvent, getRandomAvatar };

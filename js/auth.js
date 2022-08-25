@@ -1,4 +1,4 @@
-import { select } from "./utils.js";
+import { select, getRandomAvatar } from "./utils.js";
 
 class Auth {
   constructor() {
@@ -14,24 +14,62 @@ class Auth {
   init() {
     this.profile = this.getUsers(this.currentUser)[0];
     if (!!this.profile) {
-      if (select("nav.is-auth")) select("nav.is-auth").style.display = "flex";
-      if (select("nav.not-auth")) select("nav.not-auth").style.display = "none";
       if (select("#app-bar")) select("#app-bar").classList.add("sm-block");
       if (select("#side-bar")) select("#side-bar").classList.add("auth");
       if (select("#header")) select("#header").classList.add("sm-hidden");
       if (select(".user-email")) {
         select(".user-email").textContent = this.profile.email;
       }
+      if (select(".user-profile")) {
+        getRandomAvatar().then(function (data) {
+          const {
+            picture: { thumbnail },
+          } = data.results[0];
+          const userProfiles = select(".user-profile", true);
+          userProfiles.map(function (profile) {
+            profile.innerHTML = `<img src="${thumbnail}" class="w-10 h-10 rounded-full" alt="" />`;
+          });
+        });
+      }
+      if (select(".not-auth")) {
+        const notAuths = select(".not-auth", true);
+        notAuths.map(function (element) {
+          element.classList.add("hidden");
+        });
+      }
+      if (select(".is-auth")) {
+        const notAuths = select(".not-auth", true);
+        notAuths.map(function (element) {
+          element.classList.remove("hidden");
+        });
+      }
       if (window.location.pathname.includes("auth"))
         window.location.replace("/");
     } else {
-      if (select("nav.not-auth")) select("nav.not-auth").style.display = "flex";
-      if (select("nav.is-auth")) select("nav.is-auth").style.display = "none";
       if (select("#app-bar")) select("#app-bar").classList.remove("sm-block");
       if (select("#side-bar")) select("#side-bar").classList.remove("auth");
       if (select("#header")) select("#header").classList.remove("sm-hidden");
       if (select(".user-email")) {
         select(".user-email").textContent = "";
+      }
+      if (select(".user-profile")) {
+        const userProfiles = select(".user-profile", true);
+        userProfiles.map(function (profile) {
+          profile.innerHTML = `<i class="fa-regular fa-user"></i>`;
+        });
+      }
+
+      if (select(".not-auth")) {
+        const notAuths = select(".not-auth", true);
+        notAuths.map(function (element) {
+          element.classList.remove("hidden");
+        });
+      }
+      if (select(".is-auth")) {
+        const notAuths = select(".not-auth", true);
+        notAuths.map(function (element) {
+          element.classList.add("hidden");
+        });
       }
     }
   }
