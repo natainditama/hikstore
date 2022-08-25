@@ -35,8 +35,10 @@ addEvent(
   "click",
   ".logout",
   function () {
-    const confirm = window.confirm("Are you sure to logout?");
-    if (confirm) auth.logout();
+    if (auth.profile) {
+      const confirm = window.confirm("Are you sure to logout?");
+      if (confirm) auth.logout();
+    }
   },
   true
 );
