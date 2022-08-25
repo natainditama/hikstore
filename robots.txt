@@ -3,3 +3,4 @@
 # Allow crawling of all content
 User-agent: *
 Disallow:
+Sitemap: https://hikstore.pages.dev/sitemap.xml
