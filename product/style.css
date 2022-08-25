@@ -3,6 +3,9 @@ Body {
 }
 
 /* start sidebar top */
+.sidebar-close{
+  display:none;
+}
 .sidebar-top {
   display: flex;
   flex-direction: column;
@@ -419,6 +422,7 @@ Body {
 .Filter {
   background-color: var(--primary);
   border-radius: 7px;
+  padding:12px;
 }
 
 .color-list {
@@ -496,8 +500,48 @@ Body {
 
 @media screen and (max-width:725px)
 {
-.sidebar{
-    display: none;
+
+  .sidebar {
+    position: absolute;
+    background-color: aliceblue;
+    color:black;
+    width: 90%;
+    height: 100%;
+    top: 218px;
+    left: 28px;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+  }
+
+  .sidebar.active {
+    transform: translate(-1%, -2%) scale(1);
+  }
+
+.sidebar-close{
+  display:block;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+
+}
+
+#overlay{
+  position:fixed;
+  bottom:0px;
+  top:0px;
+  left:0px;
+  right:0px;
+
+  
+  z-index:-1;
+}
+
+#overlay.active{
+  opacity:1;
+  pointer-events:all;
 }
 }
 
@@ -510,7 +554,7 @@ Body {
         margin-left: 20px;
     }
     .sidebar{
-        display: none;
+      
     }
 }
 
