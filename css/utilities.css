@@ -91,7 +91,7 @@
 .shadow-sm {
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 }
-.shadow-xl {
+.-shadow-xl {
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
     0 8px 10px -6px rgb(0 0 0 / 0.1), -20px 0 25px -5px rgb(0 0 0 / 0.1);
 }
@@ -259,6 +259,10 @@
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
 .w-1\/2 {
   width: 50%;
 }
@@ -270,6 +274,72 @@
 }
 .bg-twitter {
   background-color: #1da1f2;
+}
+.link {
+  position: relative;
+  opacity: 0.75;
+  width: max-content;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+.link:hover {
+  opacity: 1;
+  color: var(--black);
+}
+.link::before {
+  transition: 300ms;
+  height: 3px;
+  content: "";
+  position: absolute;
+  background-color: var(--black);
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  opacity: 0;
+}
+.link:hover::before,
+.link.current::before {
+  bottom: -3px;
+  opacity: 1;
+}
+.h-screen {
+  height: 100vh;
+}
+.object-cover {
+  object-fit: cover;
+}
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.text-right {
+  text-align: right;
+}
+.row-span-2 {
+  grid-row: span 2 / span 2;
+}
+.grid-rows-3 {
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+.leading-tight {
+  line-height: 1.25;
+}
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.border-l {
+  border-left-width: 1.5px;
+}
+.w-12 {
+  width: 3rem;
+}
+.right-2 {
+  right: 0.5rem;
+}
+.top-0 {
+  top: 0;
 }
 @media screen and (max-width: 768px) {
   .sm-hidden {
@@ -292,5 +362,11 @@
   }
   .sm-block {
     display: block;
+  }
+  .sm-w-full {
+    width: 100%;
+  }
+  .sm-flex {
+    display: flex;
   }
 }

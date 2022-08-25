@@ -56,53 +56,83 @@
 
   <body>
     <!-- Header Start -->
-    <header id="header" class="sticky inset-0 h-20 z-100 bg-gray">
+    <header id="header" class="sticky inset-0 h-20 z-100 bg-white">
       <div class="container h-full">
-        <div class="flex-row h-full justify-start items-center gap-4">
-          <a href="/index.html" class="flex-row items-center mr-auto">
+        <div class="flex-row h-full justify-between items-center gap-2">
+          <a href="/index.html" class="flex-row items-center">
             <img
-              class="h-12"
+              class="h-12 w-12"
               draggable="false"
               src="/img/logo.png"
               alt="Hikstore"
             />
-            <h2 class="text-2xl sm-hidden">Hikstore</h2>
           </a>
-          <nav class="is-auth flex-row items-center gap-6 hidden">
-            <button class="text-xl sm-hidden">
-              <i class="fa-regular fa-magnifying-glass"></i>
-            </button>
-            <button class="text-xl relative sm-hidden">
+          <nav
+            class="flex-row gap-4 sm-hidden justify-center items-center mr-auto"
+          >
+            <a href="/index.html" class="link">
+              <span class="text-lg">Home</span>
+            </a>
+            <a href="/product/index.html" class="link">
+              <span class="text-lg">Clothing</span>
+            </a>
+            <a href="/product/index.html" class="link">
+              <span class="text-lg">Equipment</span>
+            </a>
+            <a href="/product/index.html" class="link">
+              <span class="text-lg">Sales</span>
+            </a>
+          </nav>
+          <nav class="flex-row items-center justify-center">
+            <form
+              action=""
+              class="border flex-row gap-2 bg-gray rounded px-4 py-2 sm-hidden"
+            >
+              <label for="search">
+                <i class="fa-regular fa-magnifying-glass"></i>
+              </label>
+              <input
+                type="search"
+                name="search"
+                id="search"
+                placeholder="Search here..."
+              />
+            </form>
+            <button class="text-xl relative px-5 py-2 h-full">
               <i class="fa-regular fa-bag-shopping"></i>
               <span
-                class="absolute text-xs text-white -top-1 -right-2 bg-primary h-4 w-4 aspect-square rounded-full"
+                class="absolute text-xs text-white top-0 right-2 bg-primary h-4 w-4 aspect-square rounded-full"
                 >0</span
               >
             </button>
-            <button class="text-xl flex-row items-center gap-2">
+            <a
+              href="/auth/login.html"
+              class="text-xl flex-row items-center border-l px-5 py-2 h-full"
+            >
               <i class="fa-regular fa-user"></i>
+            </a>
+            <button
+              class="btn-menu flex-row items-center gap-2 hidden sm-flex border-l px-5 py-2 h-full"
+            >
+              <span class="menu-icon">
+                <span></span>
+              </span>
             </button>
           </nav>
-          <nav class="not-auth flex-row items-center gap-2 hidden">
-            <a
-              href="/auth/signup.html"
-              class="border-2 border-primary text-white bg-primary rounded px-5 py-2 sm-hidden"
-            >
-              Sign Up
-            </a>
+          <!-- <nav class="flex-row items-center gap-2 hidden">
             <a
               href="/auth/login.html"
               class="border-2 border-primary rounded px-5 py-2 sm-hidden"
             >
               Log In
             </a>
-          </nav>
-          <button class="btn-menu flex-row items-center gap-2">
-            <span class="text-lg">MENU</span>
-            <span class="menu-icon">
-              <span></span>
-            </span>
-          </button>
+            <a
+              href="/auth/signup.html"
+              class="border-2 border-primary text-white bg-primary rounded px-5 py-2 sm-hidden"
+            >
+              Sign Up
+            </a>
+          </nav> -->
         </div>
       </div>
     </header>
@@ -165,6 +195,20 @@
             Logout
           </button>
         </div>
+        <form
+          action=""
+          class="border flex-row gap-2 bg-gray rounded px-4 py-2 hidden sm-flex"
+        >
+          <label for="search">
+            <i class="fa-regular fa-magnifying-glass"></i>
+          </label>
+          <input
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Search here..."
+          />
+        </form>
         <a
           href="/index.html"
           class="nav-link flex-row justify-between items-center"
@@ -173,40 +217,40 @@
           <i class="fa-solid fa-arrow-right"></i>
         </a>
         <a
-          href="/about.html"
+          href="/product/index.html"
           class="nav-link flex-row justify-between items-center"
         >
-          <span class="text-xl">About</span>
+          <span class="text-xl">Clothing</span>
           <i class="fa-solid fa-arrow-right"></i>
         </a>
         <a
           href="/product/index.html"
           class="nav-link flex-row justify-between items-center"
         >
-          <span class="text-xl">Product</span>
+          <span class="text-xl">Equipment</span>
           <i class="fa-solid fa-arrow-right"></i>
         </a>
         <a
-          href="/contact.html"
+          href="/product/index.html"
           class="nav-link flex-row justify-between items-center"
         >
-          <span class="text-xl">Contact Us</span>
+          <span class="text-xl">Sales</span>
           <i class="fa-solid fa-arrow-right"></i>
         </a>
         <div
           class="user-guest mt-auto flex-row items-center gap-4 text-white text-center"
         >
           <a
-            href="/auth/signup.html"
-            class="border-2 border-primary text-white bg-primary rounded px-5 py-2 w-full hidden sm-block"
-          >
-            Sign Up
-          </a>
-          <a
             href="/auth/login.html"
             class="border-2 border-primary rounded px-5 py-2 w-full hidden sm-block"
           >
             Log In
+          </a>
+          <a
+            href="/auth/signup.html"
+            class="border-2 border-primary text-white bg-primary rounded px-5 py-2 w-full hidden sm-block"
+          >
+            Sign Up
           </a>
         </div>
       </nav>
@@ -220,7 +264,7 @@
     <!-- Content End -->
 
     <!-- Footer Start -->
-    <footer class="py-6 bg-white">
+    <footer class="py-10 bg-gray">
       <div class="container h-full">
         <div class="grid grid-cols-3 gap-6 sm-grid-cols-none">
           <div class="flex-col gap-2">
