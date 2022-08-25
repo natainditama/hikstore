@@ -74,7 +74,13 @@
     <main class="overflow-hidden">
       <section class="h-screen overflow-hidden">
         <div class="grid grid-cols-3 sm-grid-rows-3 sm-grid-cols-none h-full">
-          <div class="relative col-span-2 sm-col-auto bg-black">
+          <div
+            class="relative col-span-2 sm-col-auto bg-gray"
+            style="
+              background-image: url(/img/videos/login-thumb.png);
+              background-size: cover;
+            "
+          >
             <video
               type="video/mp4"
               volume="0"
@@ -86,16 +92,14 @@
               class="absolute inset-0 object-cover"
               style="width: calc(100% + 1rem); height: calc(100% + 0.5rem)"
             >
-              <source
-                src="/img/videos/login.mp4"
-                type="video/mp4"
-              />
+              <source src="/img/videos/login.mp4" type="video/mp4" />
             </video>
           </div>
           <div
             class="flex-col justify-center items-center h-full sm-row-span-2"
+            style="overflow-y: auto"
           >
-            <h1 class="text-4xl mb-2">Log in</h2>
+            <h1 class="text-4xl mb-2">Log in</h1>
             <p class="text-lg mb-6">Login to access your account</p>
             <form
               action=""
@@ -123,9 +127,7 @@
                 />
               </div>
               <div class="flex-col">
-                <a href="#" class="mb-4 text-primary underline"
-                  >Forgot your password?</a
-                >
+                <a href="#" class="mb-4 underline">Forgot your password?</a>
                 <button
                   type="submit"
                   class="border-2 border-black text-white bg-black rounded px-5 py-4"

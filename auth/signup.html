@@ -74,7 +74,13 @@
     <main class="overflow-hidden">
       <section class="h-screen overflow-hidden">
         <div class="grid grid-cols-3 sm-grid-rows-3 sm-grid-cols-none h-full">
-          <div class="relative col-span-2 sm-col-auto bg-black">
+          <div
+            class="relative col-span-2 sm-col-auto bg-gray"
+            style="
+              background-image: url(/img/videos/signup-thumb.png);
+              background-size: cover;
+            "
+          >
             <video
               type="video/mp4"
               volume="0"
@@ -91,6 +97,7 @@
           </div>
           <div
             class="flex-col justify-center items-center h-full sm-row-span-2"
+            style="overflow-y: auto"
           >
             <h1 class="text-4xl mb-2">Sign Up</h1>
             <p class="text-lg mb-6">Sign up to create new account</p>
