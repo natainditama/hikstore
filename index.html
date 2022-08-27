@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Hikstore - Hiking Store</title>
+    <title>Hikstore- Hiking Store</title>
     <meta
       name="description"
       content="Everything you need for your next Mountain Adventure is available online. Check out Clothing, Shoes, Technical Hardware & Avalanche Safety Equipment."
@@ -17,93 +17,119 @@
     <link rel="canonical" href="https://hikstore.pages.dev/" />
     <meta name="theme-color" content="#f4f4f5" />
     <meta name="msapplication-TileColor" content="#f4f4f5" />
-    <meta name="msapplication-config" content="browserconfig.xml" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
 
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="img/icons/apple-touch-icon.png"
+      href="/img/icons/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="img/icons/favicon-32x32.png"
+      href="/img/icons/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="img/icons/favicon-16x16.png"
+      href="/img/icons/favicon-16x16.png"
     />
     <link rel="manifest" href="site.webmanifest" />
     <link
       rel="mask-icon"
-      href="img/icons/safari-pinned-tab.svg"
+      href="/img/icons/safari-pinned-tab.svg"
       color="#ffcb37"
     />
-    <link rel="shortcut icon" href="img/icons/favicon.ico" />
+    <link rel="shortcut icon" href="/img/icons/favicon.ico" />
 
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="fontawesome/css/solid.css" />
-    <link rel="stylesheet" href="fontawesome/css/regular.css" />
-    <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css" />
-    <link rel="stylesheet" href="css/utilities.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/fontawesome/css/solid.css" />
+    <link rel="stylesheet" href="/fontawesome/css/regular.css" />
+    <link rel="stylesheet" href="/fontawesome/css/brands.css" />
+    <link rel="stylesheet" href="/fontawesome/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="/css/utilities.css" />
 
-    <script type="module" defer src="js/main.js"></script>
+    <script type="module" defer src="/js/main.js"></script>
   </head>
 
   <body>
-    <header id="header" class="sticky inset-0 h-20 z-100 bg-gray">
+    <!-- Header Start -->
+    <header id="header" class="sticky inset-0 h-20 z-100 bg-white">
       <div class="container h-full">
-        <div class="flex-row h-full justify-start items-center gap-4">
-          <a href="/index.html" class="flex-row items-center mr-auto">
+        <div class="flex-row h-full justify-between items-center gap-2">
+          <a href="/index.html" class="flex-row items-center">
             <img
-              class="h-12"
+              class="h-12 w-12"
               draggable="false"
-              src="img/logo.png"
+              src="/img/logo.png"
               alt="Hikstore"
             />
-            <h2 class="text-2xl sm-hidden">Hikstore</h2>
           </a>
-          <nav class="is-auth flex-row items-center gap-6 hidden">
-            <button class="text-xl sm-hidden">
-              <i class="fa-regular fa-magnifying-glass"></i>
-            </button>
-            <button class="text-xl relative sm-hidden">
+          <nav
+            class="flex-row gap-4 sm-hidden justify-center items-center mr-auto"
+          >
+            <a href="/index.html" class="link">
+              <span class="text-lg">Home</span>
+            </a>
+            <a href="/product/index.html" class="link">
+              <span class="text-lg">Clothing</span>
+            </a>
+            <a href="/product/index.html" class="link">
+              <span class="text-lg">Equipment</span>
+            </a>
+            <a href="/product/index.html" class="link">
+              <span class="text-lg">Sales</span>
+            </a>
+          </nav>
+          <nav class="flex-row items-center justify-center">
+            <form
+              action=""
+              class="border flex-row gap-2 bg-gray rounded px-4 py-2 sm-hidden"
+            >
+              <label for="search">
+                <i class="fa-regular fa-magnifying-glass"></i>
+              </label>
+              <input
+                type="search"
+                name="search"
+                id="search"
+                placeholder="Search here..."
+              />
+            </form>
+            <button class="text-xl relative px-5 py-2 h-full">
               <i class="fa-regular fa-bag-shopping"></i>
               <span
-                class="absolute text-xs text-white -top-1 -right-2 bg-primary h-4 w-4 aspect-square rounded-full"
+                class="absolute text-xs text-white top-0 right-2 bg-primary h-4 w-4 aspect-square rounded-full"
                 >0</span
               >
             </button>
-            <button class="text-xl flex-row items-center gap-2">
+            <button
+              class="user-profile logout text-xl flex-row items-center border-l px-5 py-2 h-full"
+            >
               <i class="fa-regular fa-user"></i>
             </button>
-          </nav>
-          <nav class="not-auth flex-row items-center gap-2 hidden">
+            <button
+              class="btn-menu flex-row items-center gap-2 hidden sm-flex border-l px-5 py-2 h-full"
+            >
+              <span class="menu-icon">
+                <span></span>
+              </span>
+            </button>
             <a
-              href="/auth/signup"
-              class="border-2 border-primary text-white bg-primary rounded px-5 py-2 sm-hidden"
+              href="/auth/signup.html"
+              class="border-2 border-primary text-white bg-primary rounded px-5 py-2 w-full sm-hidden w-max not-auth"
             >
               Sign Up
             </a>
-            <a
-              href="/auth/login.html"
-              class="border-2 border-primary rounded px-5 py-2 sm-hidden"
-            >
-              Log In
-            </a>
           </nav>
-          <button class="btn-menu flex-row items-center gap-2">
-            <span class="text-lg">MENU</span>
-            <span class="menu-icon">
-              <span></span>
-            </span>
-          </button>
         </div>
       </div>
     </header>
+    <!-- Header End -->
+
+    <!-- Appbar Start -->
     <nav
       id="app-bar"
       class="fixed inset-0 top-auto h-20 z-100 bg-gray -shadow-md hidden"
@@ -113,12 +139,12 @@
           <img
             class="h-12"
             draggable="false"
-            src="img/logo.png"
+            src="/img/logo.png"
             alt="Hikstore"
           />
         </a>
         <button class="text-2xl">
-          <i class="fa-regular fa-magnifying-glass"></i>
+          <i class="fa-regular fa-heart"></i>
         </button>
         <div class="relative">
           <button
@@ -138,16 +164,23 @@
             >
           </div>
         </button>
-        <button class="text-2xl flex-col justify-center items-center">
+        <button
+          class="user-profile text-2xl flex-col justify-center items-center"
+        >
           <i class="fa-regular fa-user"></i>
         </button>
       </div>
     </nav>
+    <!-- Appbar End -->
+
+    <!-- Sidebar Start -->
     <aside id="side-bar" class="fixed inset-0">
       <nav class="flex-col gap-4 relative w-4/5 mx-auto h-full my-1/10">
         <div class="user-area flex-row items-center justify-between gap-2 mb-4">
           <div class="text-white flex-row items-center gap-2">
-            <i class="fa-regular fa-user text-xl"></i>
+            <span class="user-profile text-xl">
+              <i class="fa-regular fa-user"></i>
+            </span>
             <span class="text-lg user-email"></span>
           </div>
           <button
@@ -157,6 +190,20 @@
             Logout
           </button>
         </div>
+        <form
+          action=""
+          class="border flex-row gap-2 bg-gray rounded px-4 py-2 hidden sm-flex"
+        >
+          <label for="search">
+            <i class="fa-regular fa-magnifying-glass"></i>
+          </label>
+          <input
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Search here..."
+          />
+        </form>
         <a
           href="/index.html"
           class="nav-link flex-row justify-between items-center"
@@ -165,44 +212,224 @@
           <i class="fa-solid fa-arrow-right"></i>
         </a>
         <a
-          href="/about.html"
+          href="/product/index.html"
           class="nav-link flex-row justify-between items-center"
         >
-          <span class="text-xl">About</span>
+          <span class="text-xl">Clothing</span>
           <i class="fa-solid fa-arrow-right"></i>
         </a>
         <a
           href="/product/index.html"
           class="nav-link flex-row justify-between items-center"
         >
-          <span class="text-xl">Product</span>
+          <span class="text-xl">Equipment</span>
           <i class="fa-solid fa-arrow-right"></i>
         </a>
         <a
-          href="/contact.html"
+          href="/product/index.html"
           class="nav-link flex-row justify-between items-center"
         >
-          <span class="text-xl">Contact Us</span>
+          <span class="text-xl">Sales</span>
           <i class="fa-solid fa-arrow-right"></i>
         </a>
         <div
           class="user-guest mt-auto flex-row items-center gap-4 text-white text-center"
         >
           <a
-            href="/auth/signup.html"
-            class="border-2 border-primary text-white bg-primary rounded px-5 py-2 w-full hidden sm-block"
-          >
-            Sign Up
-          </a>
-          <a
             href="/auth/login.html"
             class="border-2 border-primary rounded px-5 py-2 w-full hidden sm-block"
           >
             Log In
           </a>
+          <a
+            href="/auth/signup.html"
+            class="border-2 border-primary text-white bg-primary rounded px-5 py-2 w-full hidden sm-block"
+          >
+            Sign Up
+          </a>
         </div>
       </nav>
     </aside>
+    <!-- Sidebar End -->
+
+    <!-- Content Start -->
+    <main>
+      <!-- Your content here -->
+    </main>
+    <!-- Content End -->
+
+    <!-- Footer Start -->
+    <footer class="py-10 bg-gray">
+      <div class="container h-full">
+        <div class="grid grid-cols-3 gap-6 sm-grid-cols-none">
+          <div class="flex-col gap-2">
+            <a href="/index.html" class="flex-row items-center gap-2">
+              <img
+                class="h-12"
+                draggable="false"
+                src="/img/logo.png"
+                alt="Hikstore"
+              />
+              <h2 class="text-2xl">Hikstore</h2>
+            </a>
+            <p class="text-base w-4/5 mb-2">
+              Everything you need for your next Mountain Adventure is available
+              online.
+            </p>
+            <div class="flex-row gap-4">
+              <a href="#" class="h-10 w-10 bg-facebook text-white rounded-full">
+                <span
+                  class="flex-row justify-center items-center h-full text-xl"
+                >
+                  <i class="fa-brands fa-facebook-f"></i>
+                </span>
+              </a>
+              <a
+                href="#"
+                class="h-10 w-10 bg-instagram text-white rounded-full"
+              >
+                <span
+                  class="flex-row justify-center items-center h-full text-xl"
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                </span>
+              </a>
+              <a href="#" class="h-10 w-10 bg-twitter text-white rounded-full">
+                <span
+                  class="flex-row justify-center items-center h-full text-xl"
+                >
+                  <i class="fa-brands fa-twitter"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="flex-col gap-2">
+            <h4 class="text-xl">Support</h4>
+            <a href="#" class="link">Help & FAQ</a>
+            <a href="#" class="link">Term of Service</a>
+            <a href="#" class="link">Privacy Policy</a>
+          </div>
+          <div class="flex-col gap-2">
+            <h4 class="text-xl">Payment Method</h4>
+            <div>
+              <img
+                src="/img/footer-img/image-removebg-preview.png"
+                alt="Payment Method"
+              />
+            </div>
+            <h4 class="text-xl">Delivery Service</h4>
+            <div class="flex-row">
+              <img
+                src="/img/footer-img/O1CN011Ya3Kg1OSw3sg81tm___6000000001705-2-tps-96-70-removebg-preview.png"
+                alt="J&T"
+              />
+              <img
+                src="/img/footer-img/O1CN01DGonqR1H5qmpBI2hf___6000000000707-2-tps-96-70-removebg-preview.png"
+                alt="Gosend"
+              />
+              <img
+                src="/img/footer-img/O1CN01Y8JAuA1pB4EhCiF0K___6000000005321-2-tps-96-70-removebg-preview.png"
+                alt="JNE"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+    <script>
+      fetch("/data/products.json")
+        .then((res) => res.json())
+        .then(function (data) {
+          const newProd = document.querySelector("#new-products");
+          const popular = document.querySelector("#popular-products");
+          data.map(function (item) {
+            popular.insertAdjacentHTML(
+              "beforeend",
+              `<div class="flex-col gap-4" style="height: 100%">
+                    <div class="thumbnail">
+                      <img
+                        src="${item.thumbnail}"
+                        class="front"
+                        alt="${item.title}"
+                        srcset="${item.thumbnail}"
+                      />
+                      <img
+                        src="${item.images[0]}"
+                        class="back"
+                        alt="${item.title}"
+                        srcset="${item.images[0]}"
+                      />
+                      <button class="btn-wish text-xl"></button>
+                      <button class="btn-cart flex-row text-sm px-4 py-2">
+                        Add to Cart
+                      </button>
+                    </div>
+                    <div class="flex-col gap-2 px-2">
+                      <div class="flex-row flex-wrap gap-x-2">
+                        ${item.categories
+                          .map(function (category) {
+                            return `<a href="#">${category}</a>`;
+                          })
+                          .join("")}
+                      </div>
+                      <a href="#" class="-mt-1">
+                        <h2 class="text-xl">${item.title}</h2>
+                      </a>
+                      <span class="font-medium">IDR ${
+                        (item.price * 14000) // 1 dollar = 14.000 jadi dikali
+                          .toString() // dijadikan string
+                          .replace(/\B(?=(\d{3})+(?!\d))/g, ".") // regex setelah angka 3 isi titik
+                      } </span>
+                    </div>
+                  </div>
+      `
+            );
+            newProd.insertAdjacentHTML(
+              "beforeend",
+              `<div class="flex-col gap-4" style="height: 100%">
+                    <div class="thumbnail">
+                      <img
+                        src="${item.thumbnail}"
+                        class="front"
+                        alt="${item.title}"
+                        srcset="${item.thumbnail}"
+                      />
+                      <img
+                        src="${item.images[0]}"
+                        class="back"
+                        alt="${item.title}"
+                        srcset="${item.images[0]}"
+                      />
+                      <button class="btn-wish text-xl"></button>
+                      <button class="btn-cart flex-row text-sm px-4 py-2">
+                        Add to Cart
+                      </button>
+                    </div>
+                    <div class="flex-col gap-2 px-2">
+                      <div class="flex-row flex-wrap gap-x-2">
+                        ${item.categories
+                          .map(function (category) {
+                            return `<a href="#">${category}</a>`;
+                          })
+                          .join("")}
+                      </div>
+                      <a href="#" class="-mt-1">
+                        <h2 class="text-xl">${item.title}</h2>
+                      </a>
+                      <span class="font-medium">IDR ${
+                        (item.price * 14000) // 1 dollar = 14.000 jadi dikali
+                          .toString() // dijadikan string
+                          .replace(/\B(?=(\d{3})+(?!\d))/g, ".") // regex setelah angka 3 isi titik
+                      } </span>
+                    </div>
+                  </div>
+      `
+            );
+          });
+        });
+    </script>
+
     <!-- Google tag (gtag.js) -->
     <script
       async
