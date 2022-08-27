@@ -38,6 +38,8 @@ addEvent(
     if (auth.profile) {
       const confirm = window.confirm("Are you sure to logout?");
       if (confirm) auth.logout();
+    } else {
+      window.location.href = "/auth/login.html";
     }
   },
   true
@@ -46,6 +48,15 @@ addEvent(
 const navLinks = select(".nav-link", true);
 if (navLinks) {
   navLinks.forEach(function (item) {
+    const location = window.location.pathname;
+    const route = item.getAttribute("href");
+    if (location == route) item.classList.add("current");
+  });
+}
+
+const links = select(".link", true);
+if (links) {
+  links.forEach(function (item) {
     const location = window.location.pathname;
     const route = item.getAttribute("href");
     if (location == route) item.classList.add("current");
