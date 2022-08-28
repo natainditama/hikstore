@@ -74,10 +74,10 @@
               <span class="text-lg">Home</span>
             </a>
             <a href="/product/index.html" class="link">
-              <span class="text-lg">Clothing</span>
+              <span class="text-lg">Men</span>
             </a>
             <a href="/product/index.html" class="link">
-              <span class="text-lg">Equipment</span>
+              <span class="text-lg">Women</span>
             </a>
             <a href="/product/index.html" class="link">
               <span class="text-lg">Sales</span>
@@ -266,15 +266,6 @@
               ducimus adipisci ex perferendis vitae doloremque nam magnam porro,
               repellendus consequuntur.
             </p>
-            <!-- <a
-              href="/product/index.html"
-              class="border-2 w-max border-primary rounded px-5 py-3 flex-row items-center gap-4"
-            >
-              <span class="font-medium">Explore Now</span>
-              <span class="text-xl text-primary">
-                <i class="fa-solid fa-arrow-right-long"></i>
-              </span>
-            </a> -->
             <div class="h-20 sm-hidden"></div>
           </div>
           <div class="relative flex-col justify-center items-center">
@@ -301,14 +292,30 @@
                 Trusted by over 100,000+ Clients worldwide since 2005
               </h2>
             </div>
-            <div class="grid grid-cols-2">
-              <div class="flex-col items-center sm-items-start gap-2 text-gray">
-                <h4 class="text-7xl sm-text-6xl leading-tight">4,5</h4>
-                <span>12,000 Ratings</span>
+            <div class="grid grid-cols-4 sm-grid-cols-2 gap-6">
+              <div class="flex-col items-center justify-center px-2 py-6">
+                <img
+                  src="https://cdn.worldvectorlogo.com/logos/ayura-logo-gray.svg"
+                  alt=""
+                />
               </div>
-              <div class="flex-col items-center sm-items-start gap-2 text-gray">
-                <h4 class="text-7xl sm-text-6xl leading-tight">5 M+</h4>
-                <span>Worldwide Product</span>
+              <div class="flex-col items-center justify-center px-2 py-6">
+                <img
+                  src="https://cdn.worldvectorlogo.com/logos/ayura-logo-gray.svg"
+                  alt=""
+                />
+              </div>
+              <div class="flex-col items-center justify-center px-2 py-6">
+                <img
+                  src="https://cdn.worldvectorlogo.com/logos/ayura-logo-gray.svg"
+                  alt=""
+                />
+              </div>
+              <div class="flex-col items-center justify-center px-2 py-6">
+                <img
+                  src="https://cdn.worldvectorlogo.com/logos/ayura-logo-gray.svg"
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -396,98 +403,6 @@
       </div>
     </footer>
     <!-- Footer End -->
-    <script>
-      fetch("/data/products.json")
-        .then((res) => res.json())
-        .then(function (data) {
-          const newProd = document.querySelector("#new-products");
-          const popular = document.querySelector("#popular-products");
-          data.map(function (item) {
-            popular.insertAdjacentHTML(
-              "beforeend",
-              `<div class="flex-col gap-4" style="height: 100%">
-                    <div class="thumbnail">
-                      <img
-                        src="${item.thumbnail}"
-                        class="front"
-                        alt="${item.title}"
-                        srcset="${item.thumbnail}"
-                      />
-                      <img
-                        src="${item.images[0]}"
-                        class="back"
-                        alt="${item.title}"
-                        srcset="${item.images[0]}"
-                      />
-                      <button class="btn-wish text-xl"></button>
-                      <button class="btn-cart flex-row text-sm px-4 py-2">
-                        Add to Cart
-                      </button>
-                    </div>
-                    <div class="flex-col gap-2 px-2">
-                      <div class="flex-row flex-wrap gap-x-2">
-                        ${item.categories
-                          .map(function (category) {
-                            return `<a href="#">${category}</a>`;
-                          })
-                          .join("")}
-                      </div>
-                      <a href="#" class="-mt-1">
-                        <h2 class="text-xl">${item.title}</h2>
-                      </a>
-                      <span class="font-medium">IDR ${
-                        (item.price * 14000) // 1 dollar = 14.000 jadi dikali
-                          .toString() // dijadikan string
-                          .replace(/\B(?=(\d{3})+(?!\d))/g, ".") // regex setelah angka 3 isi titik
-                      } </span>
-                    </div>
-                  </div>
-      `
-            );
-            newProd.insertAdjacentHTML(
-              "beforeend",
-              `<div class="flex-col gap-4" style="height: 100%">
-                    <div class="thumbnail">
-                      <img
-                        src="${item.thumbnail}"
-                        class="front"
-                        alt="${item.title}"
-                        srcset="${item.thumbnail}"
-                      />
-                      <img
-                        src="${item.images[0]}"
-                        class="back"
-                        alt="${item.title}"
-                        srcset="${item.images[0]}"
-                      />
-                      <button class="btn-wish text-xl"></button>
-                      <button class="btn-cart flex-row text-sm px-4 py-2">
-                        Add to Cart
-                      </button>
-                    </div>
-                    <div class="flex-col gap-2 px-2">
-                      <div class="flex-row flex-wrap gap-x-2">
-                        ${item.categories
-                          .map(function (category) {
-                            return `<a href="#">${category}</a>`;
-                          })
-                          .join("")}
-                      </div>
-                      <a href="#" class="-mt-1">
-                        <h2 class="text-xl">${item.title}</h2>
-                      </a>
-                      <span class="font-medium">IDR ${
-                        (item.price * 14000) // 1 dollar = 14.000 jadi dikali
-                          .toString() // dijadikan string
-                          .replace(/\B(?=(\d{3})+(?!\d))/g, ".") // regex setelah angka 3 isi titik
-                      } </span>
-                    </div>
-                  </div>
-      `
-            );
-          });
-        });
-    </script>
 
     <!-- Google tag (gtag.js) -->
     <script
