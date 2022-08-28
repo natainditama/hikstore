@@ -261,6 +261,10 @@ main {
   font-size: 0.75rem;
   line-height: 1rem;
 }
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -301,6 +305,66 @@ main {
   font-size: 6rem;
   line-height: 1;
 }
+.thumbnail {
+  position: relative;
+  width: 100%;
+  min-height: 250px;
+  height: max-content;
+  background-color: var(--gray);
+}
+.thumbnail .front {
+  position: relative;
+  width: 100%;
+}
+.thumbnail:hover .front {
+  opacity: 0;
+}
+.thumbnail .back {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+.thumbnail:hover .back {
+  opacity: 1;
+}
+.btn-wish,
+.btn-cart {
+  --size: 3rem;
+  --gap: 1rem;
+  position: absolute;
+  bottom: var(--gap);
+  right: var(--gap);
+  height: var(--size);
+  width: var(--size);
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  aspect-ratio: 1/1;
+  z-index: 10;
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 400;
+  background-color: var(--white);
+}
+.btn-cart {
+  width: max-content;
+  height: max-content;
+  border-radius: 0.25rem;
+  aspect-ratio: auto;
+  right: auto;
+  left: var(--gap);
+  font-family: inherit;
+  text-transform: uppercase;
+}
+.btn-wish::before {
+  content: "\f004";
+}
+.btn-wish.active {
+  color: #dc2626;
+}
+.btn-wish.active::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
 
 @media screen and (max-width: 768px) {
   #side-bar {
@@ -312,5 +376,13 @@ main {
   .sm-text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+  .sm-text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+  .sm-text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 }
