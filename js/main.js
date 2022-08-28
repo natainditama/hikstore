@@ -1,8 +1,17 @@
 import Auth from "./auth.js";
-import { select, addEvent } from "./utils.js";
+import { select, addEvent, getAllProduct } from "./utils.js";
 
 const auth = new Auth();
 auth.init();
+
+getAllProduct();
+
+document.addEventListener("click", function (event) {
+  const { target } = event;
+  if (target.classList.contains("btn-wish")) {
+    target.classList.toggle("active");
+  }
+});
 
 addEvent("submit", ".form-register", (e) => {
   e.preventDefault();
