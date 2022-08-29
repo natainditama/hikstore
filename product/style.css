@@ -834,7 +834,8 @@ bottom: 0px;
   font-family: "Font Awesome 5 Free"; 
   font-weight: 900; 
   content: "\f107";
-  padding-left: 30px;
+  position: absolute;
+  right: 0px;
   
 }
 .title-1 {
