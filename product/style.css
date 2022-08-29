@@ -835,7 +835,7 @@ bottom: 0px;
   font-weight: 900; 
   content: "\f107";
   position: absolute;
-  right:70px;
+  right:65px;
   
 }
 .title-1 {
@@ -850,7 +850,8 @@ bottom: 0px;
   font-family: "Font Awesome 5 Free"; 
   font-weight: 900; 
   content: "\f107";
-  padding-left: 66px;
+  position: absolute;
+  right:65px;
 }
 .title-2 {
   padding-left: 6px;
@@ -864,7 +865,8 @@ bottom: 0px;
   font-family: "Font Awesome 5 Free"; 
   font-weight: 900; 
   content: "\f107";
-  padding-left: 66px;
+  position: absolute;
+  right:65px;
 }
 .size {
   padding-left: 20px;
@@ -878,7 +880,8 @@ bottom: 0px;
   font-family: "Font Awesome 5 Free"; 
   font-weight: 900; 
   content: "\f107";
-  padding-left: 66px;
+  position: absolute;
+  right:65px;
 }
 }
 
