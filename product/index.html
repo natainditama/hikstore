@@ -35,7 +35,7 @@
         <div class="content_wrapper">
           <div class="sidebar" id="sidebar">
             <button data-close-button id="sidebar-close" class="sidebar-close">
-                <i class="fa-solid fa-xmark"></i>
+              <i class="fa-solid fa-xmark"></i>
             </button>
             <div class="section-sidebar">
               <div class="top-content-sidebar">
@@ -214,7 +214,7 @@
                     <i class="fa-solid fa-trash-can"></i>
                   </div>
                 </div>
-                </div>
+              </div>
             </div>
             <div class="" id="overlay"></div>
           </div>
@@ -225,6 +225,10 @@
               </div>
               <div class="sort-section">
                 <h1>Sort: Popular | New | Discount | Price: Low/High</h1>
+                <select name="sort" id="sort">
+                  <option value="popular">Popular</option>
+                  <option value="new">New</option>
+                </select>
               </div>
               <div class="category-top"></div>
             </div>
@@ -234,8 +238,7 @@
                   <div class="post-shop">
                     <div class="all-shop" id="all-shop">
                       <div class="post-img"></div>
-                      <div class="all-shop-content" id="all-shop-content">
-                      </div>
+                      <div class="all-shop-content" id="all-shop-content"></div>
                     </div>
                   </div>
                 </div>
@@ -278,49 +281,49 @@
   </script>
   <script>
     const openmodal = document.querySelectorAll("[data-modal-target]");
-    const closemodal =  document.querySelectorAll("[data-close-button]");
-    const overlay = document.getElementById('overlay');
+    const closemodal = document.querySelectorAll("[data-close-button]");
+    const overlay = document.getElementById("overlay");
 
-    openmodal.forEach(button => {
-  button.addEventListener('click', () => {
-    const modal = document.querySelector(button.dataset.modalTarget)
-    openModal(modal)
-  })
-})
+    openmodal.forEach((button) => {
+      button.addEventListener("click", () => {
+        const modal = document.querySelector(button.dataset.modalTarget);
+        openModal(modal);
+      });
+    });
 
-overlay.addEventListener('click', () => {
-  const modals = document.querySelectorAll('.sidebar.active')
-  modals.forEach(modal => {
-    closeModal(modal)
-  })
-})
+    overlay.addEventListener("click", () => {
+      const modals = document.querySelectorAll(".sidebar.active");
+      modals.forEach((modal) => {
+        closeModal(modal);
+      });
+    });
 
-closemodal.forEach(button => {
-  button.addEventListener('click', () => {
-    const modal = button.closest('.sidebar')
-    closeModal(modal)
-  })
-})
+    closemodal.forEach((button) => {
+      button.addEventListener("click", () => {
+        const modal = button.closest(".sidebar");
+        closeModal(modal);
+      });
+    });
 
-function openModal(modal) {
-  if (modal == null) return
-  modal.classList.add('active')
-  overlay.classList.add('active')
-}
+    function openModal(modal) {
+      if (modal == null) return;
+      modal.classList.add("active");
+      overlay.classList.add("active");
+    }
 
-function closeModal(modal) {
-  if (modal == null) return
-  modal.classList.remove('active')
-  overlay.classList.remove('active')
-}
+    function closeModal(modal) {
+      if (modal == null) return;
+      modal.classList.remove("active");
+      overlay.classList.remove("active");
+    }
   </script>
   <script>
-const heartButtons = document.querySelectorAll(".btn");
+    const heartButtons = document.querySelectorAll(".btn");
 
-heartButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    button.classList.toggle("clicked");
-  });
-});
+    heartButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        button.classList.toggle("clicked");
+      });
+    });
   </script>
 </html>
