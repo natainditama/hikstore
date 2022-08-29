@@ -572,10 +572,14 @@ input[type=checkbox]:checked:after {
   margin-top: 1rem;
 }
 
+.sort-section{
+  margin: 11px 0px;
+}
+
 .image-thumbnail {
   position: relative;
   min-width: 269px;
-  min-height: 267px;
+  min-height: 346px;
   z-index: -99;
 }
 
