@@ -79,10 +79,10 @@ Removed sections:
 
 | Color             | Hex                                                                |
 | ----------------- | ------------------------------------------------------------------ |
-| Primary Color | ![#eab208](https://via.placeholder.com/10/eab208?text=+) #eab208 |
-| Secondary Color | ![#1b120f](https://via.placeholder.com/10/1b120f?text=+) #1b120f |
-| White Color | ![#fafaf9](https://via.placeholder.com/10/fafaf9?text=+) #fafaf9 |
-| Gray Color | ![#f4f4f5](https://via.placeholder.com/10/f4f4f5?text=+) #f4f4f5 |
+| Primary Color | ![#eab208](doc/primary.png) #eab208 |
+| Secondary Color | ![#1b120f](doc/secondary.png) #1b120f |
+| White Color | ![#fafaf9](doc/white.png) #fafaf9 |
+| Gray Color | ![#f4f4f5](doc/gray.png) #f4f4f5 |
 
 <br />
 
@@ -111,7 +111,7 @@ Go to the project directory
 
 <a href="https://github.com/natainditama/hikstore/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=natainditama/hikstore" />
-</a>
+</a><br /><br />
 
 Contributions are always welcome!
 
