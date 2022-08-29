@@ -579,6 +579,22 @@ input[type=checkbox]:checked:after {
   z-index: -99;
 }
 
+/* hover images */
+.image-thumbnail img{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.image-thumbnail img:hover{
+  opacity: 0;
+}
+.image-thumbnail img.hov-img:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+
+
 .section-btn {
   position: absolute;
   bottom: 10px;
@@ -601,112 +617,12 @@ position: absolute;
 left: 176%;
 bottom: 0px;
 }
-.select-box {
-  position: relative;
-  display: block;
-  width: 100%;
-  font-size: 18px;
-  color: #60666d;
-  z-index: -99;
-}
-
-.select-box__current {
-  position: relative;
-  cursor: pointer;
-  outline: none;
-  border: 1px solid var(--primary) ;
-}
-.select-box__current:focus + .select-box__list {
-  opacity: 1;
-  -webkit-animation-name: none;
-          animation-name: none;
-}
-.select-box__current:focus + .select-box__list .select-box__option {
-  cursor: pointer;
-}
-.select-box__current:focus .select-box__icon {
-  -webkit-transform: translateY(-50%) rotate(180deg);
-          transform: translateY(-50%) rotate(180deg);
-}
-.select-box__icon {
-  position: absolute;
-  top: 50%;
-  right: 15px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  width: 20px;
-  opacity: 0.3;
-  transition: 0.2s ease;
-}
-.select-box__value {
-  display: flex;
-}
-.select-box__input {
-  display: none;
-}
-.select-box__input:checked + .select-box__input-text {
-  display: block;
-}
-.select-box__input-text {
-  display: none;
+select{
   width: 200px;
-  margin: 0;
-  padding: 5px;
-  color: #000;
+  outline: none;
+  border: 1px solid var(--primary);
+  padding: 10px;
 }
-.select-box__list {
-  position: absolute;
-  width: 100%;
-  padding: 0;
-  list-style: none;
-  opacity: 0;
-  z-index: 20;
-  -webkit-animation-name: HideList;
-          animation-name: HideList;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-timing-function: step-start;
-          animation-timing-function: step-start;
-  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
-}
-.select-box__option {
-  display: block;
-  padding: 15px;
-  background-color: #fff;
-}
-.select-box__option:hover, .select-box__option:focus {
-  color: #546c84;
-  background-color: var(--primary);
-  font-weight: 600;
-}
-
-@-webkit-keyframes HideList {
-  from {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-  }
-  to {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
-  }
-}
-
-@keyframes HideList {
-  from {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-  }
-  to {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
-  }
-}
-
-
 @media screen and (max-width:1026px) {
 
     .sections_group {
@@ -734,7 +650,6 @@ bottom: 0px;
   /* .top-content-sidebar{
     padding: 30px 0px;
   } */
-
   .shop-title {
     display: flex;
     flex-direction: column;

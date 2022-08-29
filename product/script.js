@@ -11,7 +11,10 @@ fetch("../data/products.json")
 
         <div class="post-top">
         <div class="image-thumbnail">
-            <img src="${item.thumbnail}" alt="${item.title}" />
+        <a href="#" class="hover-switch">
+        <img src="${item.thumbnail}" alt="${item.title}"/>
+        <img src="${item.images[0]}" alt="${item.title}"/>
+        </a>
             <div class="section-btn">
             <button class="text-sm btn" id="btn">
               Add to Cart
@@ -44,6 +47,9 @@ fetch("../data/products.json")
 
       `;
     }
+    function Onimg()
+    {
 
+    }
     products.innerHTML = output;
   });
