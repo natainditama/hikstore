@@ -12,6 +12,14 @@ fetch("../data/products.json")
         <div class="post-top">
         <div class="image-thumbnail">
             <img src="${item.thumbnail}" alt="${item.title}" />
+            <div class="section-btn">
+            <button class="text-sm btn" id="btn">
+              Add to Cart
+            </button>
+             <button class="text-sm btn-1" id="btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+          </div>
         </div>
         <div class="harga">
             <h2>
@@ -21,10 +29,6 @@ fetch("../data/products.json")
                     .replace(/\B(?=(\d{3})+(?!\d))/g, ".") // regex setelah angka 3 isi titik
                 }
             </h2>
-            <button class="text-xl btn" id="btn">
-                <i class="fa-solid fa-cart-plus"></i>
-                <i class="fa-regular fa-heart"></i>
-            </button>
         </div>
         <div class="category-name text-xl">
             <h2>${item.title}</h2>
