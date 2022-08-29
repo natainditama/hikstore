@@ -48,9 +48,6 @@
                 <div class="sidebar-wrap">
                   <div class="categori">
                     <h5>Filter by Cattegory:</h5>
-                    <!-- <div class="icons">
-                      <i class="fa-solid fa-angle-down"></i>
-                    </div> -->
                   </div>
                   <div class="list-categori">
                     <ul>
@@ -270,7 +267,7 @@
     </div>
     <script src="./script.js"></script>
   </body>
-  <!-- <script>
+  <script>
     var categori = document.getElementsByClassName("categori");
     var i;
     var len = categori.length;
@@ -285,7 +282,55 @@
         }
       });
     }
-  </script> -->
+  </script>
+    <script>
+      var categori = document.getElementsByClassName("title-1");
+      var i;
+      var len = categori.length;
+      for (i = 0; i < len; i++) {
+        categori[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var list = this.nextElementSibling;
+          if (list.style.maxHeight) {
+            list.style.maxHeight = null;
+          } else {
+            list.style.maxHeight = list.scrollHeight + "px";
+          }
+        });
+      }
+    </script>
+    <script>
+          var categori = document.getElementsByClassName("title-2");
+          var i;
+          var len = categori.length;
+          for (i = 0; i < len; i++) {
+            categori[i].addEventListener("click", function () {
+              this.classList.toggle("active");
+              var list = this.nextElementSibling;
+              if (list.style.maxHeight) {
+                list.style.maxHeight = null;
+              } else {
+                list.style.maxHeight = list.scrollHeight + "px";
+              }
+            });
+          }
+    </script>
+        <script>
+          var categori = document.getElementsByClassName("size");
+          var i;
+          var len = categori.length;
+          for (i = 0; i < len; i++) {
+            categori[i].addEventListener("click", function () {
+              this.classList.toggle("active");
+              var list = this.nextElementSibling;
+              if (list.style.maxHeight) {
+                list.style.maxHeight = null;
+              } else {
+                list.style.maxHeight = list.scrollHeight + "px";
+              }
+            });
+          }
+        </script>
   <script>
     function ColorCode() {
       var makingColorCode = "0123456789ABCDEF";
