@@ -104,6 +104,7 @@ Go to the project directory
 ```bash
   cd hikstore
 ```
+
 <br />
 
 <!-- Contributing -->
@@ -115,14 +116,12 @@ Go to the project directory
 
 Contributions are always welcome!
 
-<br />
 
 <!-- License -->
 ## License
 
 Distributed under the no License. See LICENSE.txt for more information.
 
-<br />
 
 <!-- Contact -->
 ## Contact
