@@ -5,7 +5,8 @@ const auth = new Auth();
 auth.init();
 
 getAllProduct();
-getAllProduct("#all-product", 20);
+getAllProduct("#all-product", 12);
+getAllProduct("#all-product", 12);
 
 document.addEventListener("click", function (event) {
   const { target } = event;
