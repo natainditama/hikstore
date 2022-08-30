@@ -25,6 +25,23 @@ const getRandomAvatar = async () => {
     .then((data) => data);
 };
 
+const setImageSize = () => {
+  const imgs = select("img", true);
+  if (imgs) {
+    imgs.forEach(function (img) {
+      const height = img.height,
+        width = img.width;
+      img.setAttribute("width", width);
+      img.setAttribute("height", height);
+      img.setAttribute("srcSet", img.src);
+      img.setAttribute("loading", "lazy");
+    });
+  }
+};
+
+document.addEventListener("DOMContentLoaded", setImageSize);
+document.addEventListener("resize", setImageSize);
+
 const getAllProduct = (target = "#products", total = 8) => {
   fetch("/data/products.json")
     .then((res) => res.json())
@@ -48,7 +65,7 @@ const getAllProduct = (target = "#products", total = 8) => {
                     alt="${data[i].title}"
                     srcset="${data[i].images[0]}"
                   />
-                  <button class="btn-wish text-xl"></button>
+                  <button class="btn-wish text-xl" aria-label="Add Wishlist"></button>
                   <button class="btn-cart flex-row text-sm px-4 py-2">
                     Add to Cart
                   </button>
@@ -57,7 +74,7 @@ const getAllProduct = (target = "#products", total = 8) => {
                   <div class="flex-row flex-wrap gap-x-2">
                     ${data[i].categories
                       .map(function (category) {
-                        return `<a href="#">${category}</a>`;
+                        return `<a href="#" class="hover-underline">${category}</a>`;
                       })
                       .join("")}
                   </div>
@@ -74,7 +91,8 @@ const getAllProduct = (target = "#products", total = 8) => {
           );
         }
       }
-    });
+    })
+    .then(setImageSize);
 };
 
 export { select, addEvent, getRandomAvatar, getAllProduct };

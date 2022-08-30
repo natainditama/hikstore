@@ -74,6 +74,12 @@
 .border-primary {
   border-color: var(--primary);
 }
+.border-primary:hover {
+  background-color: var(--primary);
+}
+.border-primary:hover * {
+  color: var(--white);
+}
 .bg-primary {
   background-color: var(--primary);
 }
@@ -402,13 +408,13 @@
   border-radius: 0.75rem;
 }
 .bg-clothing {
-  background-image: url(https://www.mammut.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fl595fda2nfqd%2FZwgKftvnUvFBZZUwJ2HPl%2F459e9566c97dfdd8696f1e4d299af349%2FFast_Hiking_SS22_Alpstein_DXH6455.jpg&w=4096&q=75);
+  background-image: url(/img/clothing.webp);
 }
 .bg-footwear {
-  background-image: url(https://images.unsplash.com/photo-1576487503401-173ffc7c669c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGZvb3R3ZWFyfGVufDB8fDB8YmxhY2t8&auto=format&fit=crop&w=1000&q=75);
+  background-image: url(/img/footwear.avif);
 }
 .bg-equipment {
-  background-image: url(https://images.unsplash.com/photo-1517172770828-dd2c3b6db6b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZXF1aXBtZW50JTIwY2xpbWJpbmd8ZW58MHx8MHxibGFja3w%3D&auto=format&fit=crop&w=1000&q=75);
+  background-image: url(/img/equipment.avif);
 }
 .bg-clothing,
 .bg-equipment,
@@ -457,6 +463,16 @@
 }
 .min-h-screen {
   min-height: 100vh;
+}
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+.hover-underline {
+  opacity: 0.8;
+}
+.hover-underline:hover {
+  opacity: 1;
+  text-decoration: underline;
 }
 @media screen and (max-width: 768px) {
   .sm-hidden {
