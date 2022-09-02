@@ -723,7 +723,7 @@ select {
     right: 0;
     overflow-y: auto;
     transform-origin: top right;
-    transform: translate(0, 0) scaleY(0);
+    transform: translate(0, 0) scale(0);
     transition-property: transform;
     transition-duration: 500ms;
     transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
