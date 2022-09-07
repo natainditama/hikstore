@@ -192,7 +192,7 @@ main {
   left: auto;
   z-index: 75;
   padding-top: 5rem;
-  padding-bottom: 7.5rem;
+  padding-bottom: 6rem;
   pointer-events: none;
 }
 #side-bar.auth .user-guest,
