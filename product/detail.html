@@ -52,7 +52,14 @@
     <link rel="stylesheet" href="/fontawesome/css/regular.css" />
     <link rel="stylesheet" href="/fontawesome/css/brands.css" />
     <link rel="stylesheet" href="/fontawesome/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="/product/style.css" />
     <link rel="stylesheet" href="/css/utilities.css" />
+
+    <script type="module" defer>
+      const params = new URLSearchParams(window.location.search);
+      const id = params?.get("id") ?? 0;
+    </script>
+
     <script type="module" defer src="/js/main.js"></script>
   </head>
 
@@ -217,14 +224,14 @@
           href="/product/index.html"
           class="nav-link flex-row justify-between items-center"
         >
-          <span class="text-xl">Clothing</span>
+          <span class="text-xl">Men</span>
           <i class="fa-solid fa-arrow-right"></i>
         </a>
         <a
           href="/product/index.html"
           class="nav-link flex-row justify-between items-center"
         >
-          <span class="text-xl">Equipment</span>
+          <span class="text-xl">Women</span>
           <i class="fa-solid fa-arrow-right"></i>
         </a>
         <a
@@ -256,6 +263,120 @@
 
     <!-- Content Start -->
     <main>
+      <section class="min-h-screen">
+        <div class="container grid grid-cols-3 sm-grid-cols-1 h-full">
+          <div class="h-full flex-col justify-between w-full">
+            <div
+              class="flex-row justify-center relative h-[calc(100vh-7.5rem)] sm-h-max w-full bg-gray"
+            >
+              <img
+                src="https://static.mammut.com/cdn-cgi/image/width=1000,quality=50,f=auto,metadata=none/master/1013-02170-00189_main-grey_191734.jpg"
+                class="h-full w-full object-cover product-preview"
+                alt="Product"
+              />
+              <button
+                class="btn-wish text-xl"
+                aria-label="Add Wishlist"
+                style="right: 1.5rem"
+              ></button>
+            </div>
+            <div class="h-30 flex-row items-center justify-center py-4 gap-4">
+              <button class="h-full bg-gray">
+                <img
+                  src="https://static.mammut.com/cdn-cgi/image/width=1000,quality=50,f=auto,metadata=none/master/1013-02170-00189_main-grey_191734.jpg"
+                  class="h-full w-full object-cover thumbnail-item border-black border-2"
+                  alt="Product"
+                />
+              </button>
+              <button class="h-full bg-gray">
+                <img
+                  src="https://static.mammut.com/cdn-cgi/image/width=1000,quality=50,f=auto,metadata=none/master/1013-02170-00189_mod-main-hf-png_210279.png"
+                  class="h-full w-full object-cover thumbnail-item border-black"
+                  alt="Product"
+                />
+              </button>
+              <button class="h-full bg-gray">
+                <img
+                  src="https://static.mammut.com/cdn-cgi/image/width=1000,quality=50,f=auto,metadata=none/master/1013-02170-00189_mod-side-hf-grey_210280.jpg"
+                  class="h-full w-full object-cover thumbnail-item border-black"
+                  alt="Product"
+                />
+              </button>
+              <button class="h-full bg-gray">
+                <img
+                  src="https://static.mammut.com/cdn-cgi/image/width=1000,quality=50,f=auto,metadata=none/master/1013-02170-00189_main-grey_191734.jpg"
+                  class="h-full w-full object-cover thumbnail-item border-black"
+                  alt="Product"
+                />
+              </button>
+            </div>
+          </div>
+          <div class="h-full col-span-2 flex-col pb-10">
+            <div class="w-4/5 sm-w-full mx-auto flex-col gap-4 mt-4">
+              <div
+                class="flex-row gap-6 py-4 mb-6 border-b-2 text-lg sm-text-md w-full"
+                style="overflow-x: hidden"
+              >
+                <div class="flex-row gap-6" style="overflow-x: auto">
+                  <span class="whitespace-nowrap opacity-100">
+                    Size and Color
+                  </span>
+                  <span class="opacity-60">Review</span>
+                  <span class="whitespace-nowrap opacity-60">
+                    Recommendation
+                  </span>
+                </div>
+              </div>
+              <h1 class="text-4xl" style="white-space: normal">
+                Rime Light IN Flex Vest Men
+              </h1>
+              <p>
+                Ideal as a thermal layer when using the layering principle, to
+                keep the core of your body warm. The extremely light Rime Light
+                Vest fits snugly to the body thanks to its stretch insulation
+                and side inserts made from elastic Polartec® Power Grid™ fleece.
+              </p>
+              <span class="text-xl">IDR 2.506.000</span>
+              <div class="flex-row gap-10">
+                <div class="flex-col gap-2">
+                  <span class="text-md">Size Available</span>
+                  <div class="flex-row gap-4">
+                    <button class="bg-gray text-sm py-2 px-4">S</button>
+                    <button class="bg-gray text-sm py-2 px-4">M</button>
+                    <button class="bg-gray text-sm py-2 px-4">L</button>
+                    <button class="bg-gray text-sm py-2 px-4">XL</button>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-col gap-2 sidear-wrap-3" style="margin-top: 0">
+                <span class="text-md">Colors</span>
+                <div class="wrap-option-color m-0">
+                  <ul style="margin: 0"></ul>
+                </div>
+              </div>
+              <div class="flex-row gap-4 mt-4">
+                <button
+                  class="border-2 border-black text-white bg-black rounded px-5 py-3 w-full w-max"
+                >
+                  <span class="font-medium text-lg sm-text-md"
+                    >Add to Cart</span
+                  >
+                </button>
+                <button
+                  class="border-2 w-max border-primary rounded px-5 py-3 flex-row items-center gap-4"
+                >
+                  <span class="font-medium text-lg sm-text-md"
+                    >Next Detail</span
+                  >
+                  <span class="text-xl">
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- Your content here... -->
     </main>
     <!-- Content End -->
@@ -340,13 +461,36 @@
       </div>
     </footer>
     <!-- Footer End -->
-
     <script>
-      const params = new URLSearchParams(window.location.search);
-      console.log(params);
-      // for (const param of params) {
-      //   console.log(param);
-      // }
+      const wrapOptionColor = document.querySelector(".wrap-option-color ul");
+      for (let i = 0; i < 3; i++) {
+        wrapOptionColor.insertAdjacentHTML(
+          "beforeend",
+          `<li>
+            <label
+              class="option-color"
+              style="background-color: #${Math.floor(
+                Math.random() * 16777215
+              ).toString(16)}"
+            >
+              <input type="checkbox" style="opacity: 0" name="color" />
+            </label>
+          </li>`
+        );
+      }
+      document.addEventListener("click", function (event) {
+        const { target } = event;
+        if (target.classList.contains("thumbnail-item")) {
+          const img = document.querySelector(".product-preview");
+          const newSrc = target.src;
+          document.querySelectorAll(".thumbnail-item").forEach((item) => {
+            item.classList.remove("border-2");
+          });
+          target.classList.add("border-2");
+          img.setAttribute("src", newSrc);
+          img.setAttribute("srcSet", newSrc);
+        }
+      });
     </script>
 
     <!-- Google tag (gtag.js) -->
