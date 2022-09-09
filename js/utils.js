@@ -78,8 +78,8 @@ const getAllProduct = (target = "#products", total = 8) => {
                       })
                       .join("")}
                   </div>
-                  <a href="#" class="-mt-1">
-                    <h2 class="text-xl">${data[i].title}</h2>
+                  <a href="/product/detail.html" class="-mt-1">
+                    <h2 class="text-xl hover-text-primary">${data[i].title}</h2>
                   </a>
                   <span class="font-medium">IDR ${
                     (data[i].price * 14000) // 1 dollar = 14.000 jadi dikali
