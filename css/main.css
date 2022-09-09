@@ -422,4 +422,12 @@ main {
     font-size: 1.875rem;
     line-height: 2.25rem;
   }
+  .sm-text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  .sm-text-md {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }

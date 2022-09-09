@@ -474,6 +474,47 @@
   opacity: 1;
   text-decoration: underline;
 }
+.h-30 {
+  height: 7.5rem;
+}
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.opacity-60 {
+  opacity: 0.6;
+}
+.border-b-2 {
+  border-bottom-width: 2px;
+}
+.opacity-100 {
+  opacity: 1;
+}
+.-mt-2 {
+  margin-top: -0.5rem;
+}
+.m-0 {
+  margin: 0;
+}
+.mt-4 {
+  margin-top: 1rem;
+}
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.h-\[calc\(100vh-7\.5rem\)\] {
+  height: calc(100vh - 7.5rem);
+}
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+.overflow-x-auto {
+  overflow-x: auto;
+}
+.hover-text-primary:hover {
+  color: var(--primary);
+}
 @media screen and (max-width: 768px) {
   .sm-hidden {
     display: none;
@@ -524,5 +565,8 @@
   }
   .sm-h-max {
     height: max-content;
+  }
+  .sm-grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
