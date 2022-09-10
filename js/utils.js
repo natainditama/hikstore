@@ -52,7 +52,7 @@ const getAllProduct = (target = "#products", total = 8) => {
           element.insertAdjacentHTML(
             "beforeend",
             `<div class="flex-col gap-4">
-                <div class="thumbnail">
+                <div class="thumbnail hover-scale-up">
                   <img
                     src="${data[i].thumbnail}"
                     class="front"
@@ -79,7 +79,9 @@ const getAllProduct = (target = "#products", total = 8) => {
                       .join("")}
                   </div>
                   <a href="/product/detail.html" class="-mt-1">
-                    <h2 class="text-xl hover-text-primary">${data[i].title}</h2>
+                    <h2 class="text-xl hover-text-primary hover-underline">${
+                      data[i].title
+                    }</h2>
                   </a>
                   <span class="font-medium">IDR ${
                     (data[i].price * 14000) // 1 dollar = 14.000 jadi dikali

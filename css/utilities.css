@@ -515,6 +515,15 @@
 .hover-text-primary:hover {
   color: var(--primary);
 }
+.hover-border-b:hover {
+  border-width: 2px;
+}
+.hover-scale-up {
+  transition: all 0.5s cubic-bezier(0.87, 0, 0.13, 1);
+}
+.hover-scale-up:hover {
+  transform: scale(1.05);
+}
 @media screen and (max-width: 768px) {
   .sm-hidden {
     display: none;
