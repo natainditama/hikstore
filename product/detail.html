@@ -264,7 +264,7 @@
     <!-- Content Start -->
     <main>
       <section class="min-h-screen">
-        <div class="container grid grid-cols-3 sm-grid-cols-1 h-full">
+        <div class="container grid grid-cols-3 sm-grid-cols-1 h-full mb-20">
           <div class="h-full flex-col justify-between w-full">
             <div
               class="flex-row justify-center relative h-[calc(100vh-7.5rem)] sm-h-max w-full bg-gray"
@@ -322,9 +322,7 @@
                     Size and Color
                   </span>
                   <span class="opacity-60">Review</span>
-                  <span class="whitespace-nowrap opacity-60">
-                    Recommendation
-                  </span>
+                  <span class="whitespace-nowrap opacity-60"> Discussion </span>
                 </div>
               </div>
               <h1 class="text-4xl" style="white-space: normal">
@@ -377,7 +375,19 @@
           </div>
         </div>
       </section>
-      <!-- Your content here... -->
+      <section class="h-max py-10 relative">
+        <div class="h-full container flex-col gap-10 justify-center">
+          <div class="flex-row sm-flex-col justify-center items-center gap-4">
+            <h2 class="text-3xl leading-tight text-center">
+              You may also like
+            </h2>
+          </div>
+          <div
+            class="grid grid-cols-4 sm-grid-cols-none gap-6"
+            id="recommend"
+          ></div>
+        </div>
+      </section>
     </main>
     <!-- Content End -->
 

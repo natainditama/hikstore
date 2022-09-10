@@ -7,6 +7,7 @@ auth.init();
 getAllProduct();
 getAllProduct("#all-product", 12);
 getAllProduct("#all-product", 12);
+getAllProduct("#recommend", 4);
 
 document.addEventListener("click", function (event) {
   const { target } = event;
