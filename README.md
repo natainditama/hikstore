@@ -19,12 +19,11 @@ Removed sections:
 
 <div align="center">
 
-  <img src="img/logo-light.png" alt="logo" width="200" height="auto" />
   <h1>Hikstore</h1>
 
 
   <p>
-    A modern ecommerce project design built with Vanilla.js  
+    Modern static ecommerce websites built with Vanilla.js  
   </p>
 
 
