@@ -61,17 +61,16 @@ Removed sections:
   </h4>
 </div>
 
-<br /><br />
+<br />
 
 <div align="center"> 
     <img src="doc/preview.png" alt="screenshot" />
   </div>
 
-<br /><br />
+<br />
 
 <!-- About the Project -->
 ## About the Project
-
 
 <!-- Color Reference -->
 ### Color Reference
@@ -83,11 +82,9 @@ Removed sections:
 | White Color | ![#fafaf9](doc/white.png) #fafaf9 |
 | Gray Color | ![#f4f4f5](doc/gray.png) #f4f4f5 |
 
-<br />
 
 <!-- Getting Started -->
 ## Getting Started
-
 
 <!-- Run Locally -->
 ### Run Locally
@@ -103,8 +100,6 @@ Go to the project directory
 ```bash
   cd hikstore
 ```
-
-<br />
 
 <!-- Contributing -->
 ## Contributing
@@ -129,3 +124,5 @@ Nata Inditama - [@natainditama](https://t.me/natainditama) - natainditama.dev@gm
 
 Project Link: [https://github.com/natainditama/hikstore](https://github.com/natainditama/hikstore)
 
+
+## Acknowledgements
