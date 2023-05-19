@@ -18,14 +18,10 @@ Removed sections:
 -->
 
 <div align="center">
-
   <h1>Hikstore</h1>
-
-
   <p>
     Modern static ecommerce websites built with Vanilla.js  
   </p>
-
 
 <!-- Badges -->
 <p>
@@ -49,7 +45,6 @@ Removed sections:
   </a>
 </p>
 
-
 <h4>
     <a href="https://hikstore.pages.dev/">View Demo</a>
   <span> · </span>
@@ -64,8 +59,8 @@ Removed sections:
 <br />
 
 <div align="center"> 
-    <img src="doc/preview.png" alt="screenshot" />
-  </div>
+  <img src="doc/preview.png" alt="screenshot" />
+</div>
 
 <br />
 
@@ -82,6 +77,16 @@ Removed sections:
 | White Color | ![#fafaf9](doc/white.png) #fafaf9 |
 | Gray Color | ![#f4f4f5](doc/gray.png) #f4f4f5 |
 
+<!-- Features -->
+### Features
+
+- Responsive Design
+- Product Search
+- User Authentication
+- Product Categories
+- Wishlist
+- SEO Optimization
+- Product Recommendations
 
 <!-- Getting Started -->
 ## Getting Started
@@ -110,12 +115,10 @@ Go to the project directory
 
 Contributions are always welcome!
 
-
 <!-- License -->
 ## License
 
 Distributed under the no License. See LICENSE.txt for more information.
-
 
 <!-- Contact -->
 ## Contact
@@ -123,6 +126,3 @@ Distributed under the no License. See LICENSE.txt for more information.
 Nata Inditama - [@natainditama](https://t.me/natainditama) - natainditama.dev@gmail.com
 
 Project Link: [https://github.com/natainditama/hikstore](https://github.com/natainditama/hikstore)
-
-
-## Acknowledgements
