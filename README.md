@@ -115,6 +115,10 @@ Go to the project directory
 
 Contributions are always welcome!
 
+<!-- Credit -->
+## Credit
+- Image placeholders by [Mammut](https://www.mammut.com/)
+
 <!-- License -->
 ## License
 
