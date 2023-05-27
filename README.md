@@ -20,7 +20,7 @@ Removed sections:
 <div align="center">
   <h1>Hikstore</h1>
   <p>
-    Modern static e-commerce websites built with JavaScript  
+    Static e-commerce websites built with JavaScript  
   </p>
 
 <!-- Badges -->
